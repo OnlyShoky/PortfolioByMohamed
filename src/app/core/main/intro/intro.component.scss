@@ -1,0 +1,136 @@
+@import '../../../../styles.scss';
+
+
+$image-width: 15rem;
+$image-height: 15rem;
+
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 2rem;
+
+  .slide-fade {
+    animation: fadeIn 1s ease-out forwards;
+
+    &.delay-1 {
+      animation-delay: 0.7s;
+    }
+    &.delay-2 {
+      animation-delay: 0.8s;
+    }
+    &.delay-3 {
+      animation-delay: 0.9s;
+    }
+    &.delay-4 {
+      animation-delay: 1s;
+    }
+  }
+
+  .image-container {
+    position: relative;
+    img.intro-image {
+      position: absolute;
+      top: -1rem;
+      left: -2rem;
+      width: $image-width;
+      height: $image-height;
+      filter: invert(0.1);
+    }
+
+    .intro-text {
+      position: relative;
+      z-index: 1;
+      color: $highlight-color;
+      font-size: 2rem;
+      font-weight: 500;
+    }
+  }
+
+  .name {
+    position: relative;
+    z-index: 1;
+    color: white;
+    font-size: 7rem;
+    font-weight: bolder;
+    line-height: 95%;
+    letter-spacing: -1.8px;
+    margin: 0;
+  }
+
+  .subheading {
+    color: $text-color;
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: -1.6px;
+    white-space: pre-wrap;
+
+    .TypingEffect {
+      color: $text-primary;
+      //   display: inline-block;
+      border-right: 2px solid; /* Blinking cursor effect */
+      white-space: nowrap;
+      overflow: hidden;
+      animation: blink 1.5s infinite;
+    }
+
+    @keyframes blink {
+      0% {
+        border-color: $text-primary;
+      }
+      50% {
+        border-color: transparent;
+      }
+      100% {
+        border-color: $text-primary;
+      }
+    }
+  }
+
+  .description {
+    color: $text-color;
+    font-size: 1.5rem;
+
+    .company-info {
+      color: $highlight-color;
+
+      .company {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .button-group {
+    display: flex;
+    gap: 1rem;
+
+    .btn {
+      background-color: $button-color;
+      padding: 10px 20px;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      .fab, .fa-solid {
+        color: $highlight-color;
+      }
+      
+
+    }
+
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

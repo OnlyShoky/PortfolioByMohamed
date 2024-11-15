@@ -1,0 +1,72 @@
+.about-me {
+    .about-me-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+  
+      @media (min-width: 800px) {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  
+    .about-me-content {
+      .about-me-heading {
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 2rem;
+      }
+  
+      .about-me-text {
+        color: var(--text-secondary);
+        font-size: 14px;
+  
+        @media (min-width: 800px) {
+          font-size: 16px;
+        }
+  
+        .more-info {
+          color: var(--button1);
+          cursor: help;
+  
+          &:hover::after {
+            content: attr(data-content);
+            color: var(--text-primary);
+            font-size: 0.875rem;
+          }
+        }
+      }
+    }
+  
+    .about-me-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      .about-me-image-container {
+        position: relative;
+        max-width: 350px;
+        max-height: 350px;
+  
+        .about-me-image-background {
+          position: absolute;
+          top: 0;
+          right: -32px;
+          width: 100px;
+          filter: invert(0.1);
+        }
+  
+        .about-me-image-main {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 50%;
+        }
+      }
+    }
+  
+    @media (min-width: 800px) {
+      .about-me-text {
+        white-space: pre-line;
+      }
+    }
+  }
+  

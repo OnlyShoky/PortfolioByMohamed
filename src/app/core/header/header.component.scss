@@ -1,0 +1,61 @@
+@import '../../../styles.scss';
+
+.navbar {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 1rem;
+
+
+  .logo {
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .bracket {
+    color: #8f9094;
+    font-weight: 600;
+  }
+
+  .menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+  }
+}
+
+.drawer-container {
+  position: relative;
+  display: flex;
+
+  width: 100%;
+}
+
+.drawer {
+  background-color: #333;
+  color: white;
+}
+
+.drawer-content a {
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+}
+
+button {
+  margin: 0 10px;
+}
+
+.flex-spacer {
+  flex: 1;
+}
+
+mat-divider {
+  color: $logo-grey;
+  height: 1px;
+
+}
+

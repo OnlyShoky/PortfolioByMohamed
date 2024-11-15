@@ -1,0 +1,29 @@
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full viewport height */
+    max-width: 70rem;
+    margin: auto;
+    gap: 2rem; /* add space between elements */
+}
+
+  .header-content {
+    position: sticky;
+    border-bottom: #4c4c4e 1px solid;
+
+
+  }
+  
+  
+  .main-content {
+    flex: 1; /* Takes up the remaining space between header and footer */
+    margin: 0; /* Ensure no margin */
+    padding: 0; /* Ensure no padding */
+  }
+  
+
+  .footer {
+ 
+    padding: 10px 0; /* This padding is fine, but make sure it’s intended */
+    margin: 0; /* Remove margin */
+  }
