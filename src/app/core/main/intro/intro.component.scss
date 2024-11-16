@@ -93,13 +93,10 @@ $image-height: 15rem;
     color: $text-color;
     font-size: 1.5rem;
 
-    .company-info {
-      color: $highlight-color;
+    color: $text-secondary;
 
-      .company {
-        font-weight: bold;
-      }
-    }
+
+
   }
 
   .button-group {

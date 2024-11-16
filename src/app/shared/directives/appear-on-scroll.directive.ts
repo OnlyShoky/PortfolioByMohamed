@@ -1,5 +1,5 @@
 import { isPlatformBrowser } from '@angular/common';
-import { Directive, ElementRef, Renderer2, OnInit, AfterViewInit, Input, ViewChild, Inject, PLATFORM_ID } from '@angular/core';
+import { Directive, ElementRef, Renderer2, OnInit, AfterViewInit, Input, ViewChild, Inject, PLATFORM_ID, EventEmitter, Output } from '@angular/core';
 @Directive({
   selector: '[appAppearOnScroll]',
   standalone: true
@@ -7,16 +7,14 @@ import { Directive, ElementRef, Renderer2, OnInit, AfterViewInit, Input, ViewChi
 
 export class AppearOnScrollDirective implements OnInit {
   private observer!: IntersectionObserver;
+  @Output() elementVisible = new EventEmitter<boolean>();
 
   constructor(private el: ElementRef, private renderer: Renderer2, @Inject(PLATFORM_ID) private platformId: object
   ) { }
-  // @Input() element!: ElementRef;
-  @ViewChild('scrollVisibility', { read: ElementRef }) element!: ElementRef;
 
 
 
   ngOnInit(): void {
-    const nativeElement = this.el.nativeElement;
 
     if (isPlatformBrowser(this.platformId)) {
       if (this.el.nativeElement) {
@@ -36,9 +34,13 @@ export class AppearOnScrollDirective implements OnInit {
           if (entry.intersectionRatio > 0.5) { // Visible when more than 50% in view
             this.renderer.removeClass(this.el.nativeElement, 'hidden');
             this.renderer.addClass(this.el.nativeElement, 'visible');
+            this.elementVisible.emit(entry.isIntersecting);
+
           } else {
             this.renderer.removeClass(this.el.nativeElement, 'visible');
             this.renderer.addClass(this.el.nativeElement, 'hidden');
+            this.elementVisible.emit(entry.isIntersecting);
+
           }
         });
       },

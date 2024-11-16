@@ -3,7 +3,7 @@
   flex-direction: column;
   margin-left: 2rem;
   margin-right: 2rem;
-  gap: 4rem;
+  gap: 5rem;
 }
 
 .visible {
@@ -12,4 +12,11 @@
 
 .hidden {
   visibility: hidden;
+}
+
+.scroll-button {
+  position: fixed;
+  right: 50vw;
+  bottom: 1rem;
+  transform: translateX(50%);
 }

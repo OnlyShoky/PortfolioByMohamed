@@ -1,16 +1,18 @@
 .page-container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Full viewport height */
-    max-width: 70rem;
-    margin: auto;
-    gap: 2rem; /* add space between elements */
+  display: flex;
+  flex-direction: column;
+  max-width: 70rem;
+  gap: 2rem; /* add space between elements */
+  margin: auto; /* add equal margin left and right */
 }
 
   .header-content {
-    position: sticky;
+    position: fixed;
+    background-color: black;
     border-bottom: #4c4c4e 1px solid;
-
+    z-index: 2;
+    width: 100%;
+    max-width: 70rem;
 
   }
   
@@ -19,6 +21,7 @@
     flex: 1; /* Takes up the remaining space between header and footer */
     margin: 0; /* Ensure no margin */
     padding: 0; /* Ensure no padding */
+    margin-top: 10rem;
   }
   
 
