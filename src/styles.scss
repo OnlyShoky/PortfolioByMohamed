@@ -20,21 +20,23 @@ $my-theme: mat.define-dark-theme((
 /* Colors */
 $background: #000000;
 $secondary: #080808;
-$complement: #FA934F;
 $display-color: #FFFFFF;
 $text-primary: #D1D5DB;
 $text-secondary: #8F9094;
 $text-tertiary: #333;
-$button1: #3CCF91;
-$button2: #F6A20E;
-$button3: #5132BF;
-$border-color: #111111;
 $logo-grey: #8F9094;
 
 $button-color: #141414;
-$button-hover-color: #3ccf91;
 $text-color: #333;
 $highlight-color: #6EACDA;
+
+h1 {
+  color: $text-primary;
+  font-size: 3.75rem;
+  font-weight: 500;
+  letter-spacing: -1.6px;
+  white-space: pre-wrap;
+}
 
 html, body {
   height: 100%;

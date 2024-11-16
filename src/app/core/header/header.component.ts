@@ -2,12 +2,13 @@ import { Component, ViewChild } from '@angular/core';
 import { SharedMaterialModule } from '../../shared/material/shared-material.module';
 import { MatDrawer } from '@angular/material/sidenav';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { RouterLink } from '@angular/router';
 
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [SharedMaterialModule,MatSidenavModule],
+  imports: [SharedMaterialModule,MatSidenavModule,RouterLink],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })

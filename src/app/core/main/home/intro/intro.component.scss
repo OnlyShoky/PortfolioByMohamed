@@ -1,4 +1,4 @@
-@import '../../../../styles.scss';
+@import '../../../../../styles.scss';
 
 
 $image-width: 15rem;
@@ -12,22 +12,22 @@ $image-height: 15rem;
   width: 100%;
   gap: 2rem;
 
-  .slide-fade {
-    animation: fadeIn 1s ease-out forwards;
+  // .slide-fade {
+  //   animation: fadeIn 1s ease-out forwards;
 
-    &.delay-1 {
-      animation-delay: 0.7s;
-    }
-    &.delay-2 {
-      animation-delay: 0.8s;
-    }
-    &.delay-3 {
-      animation-delay: 0.9s;
-    }
-    &.delay-4 {
-      animation-delay: 1s;
-    }
-  }
+  //   &.delay-1 {
+  //     animation-delay: 0.7s;
+  //   }
+  //   &.delay-2 {
+  //     animation-delay: 0.8s;
+  //   }
+  //   &.delay-3 {
+  //     animation-delay: 0.9s;
+  //   }
+  //   &.delay-4 {
+  //     animation-delay: 1s;
+  //   }
+  // }
 
   .image-container {
     position: relative;

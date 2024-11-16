@@ -1,0 +1,25 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    gap: 5rem;
+    margin-top: -3rem;
+  }
+  
+  .visible {
+    visibility: visible;
+  }
+  
+  .hidden {
+    visibility: hidden;
+  }
+  
+  .scroll-button {
+    // position: relative;
+    align-self: center;
+    // right: 50vw;
+    // bottom: 1rem;
+    // transform: translateX(50%);
+  }
+  

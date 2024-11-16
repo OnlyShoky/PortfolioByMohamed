@@ -1,0 +1,40 @@
+<div class="projects-container">
+  <div class="projects-header">
+    <h1>Projects</h1>
+    <p>
+      Here are some projects I’ve worked on, showcasing my skills in various
+      technologies.
+    </p>
+  </div>
+
+  <div class="projects-flex">
+    <a
+      *ngFor="let project of projects"
+      [href]="project.link"
+      target="_blank"
+      class="project-link"
+    >
+      <mat-card class="project-card">
+        <img mat-card-image [src]="project.image" alt="{{ project.title }}" />
+        <mat-card-content>
+          <h2>{{ project.title }}</h2>
+
+          <div class="tags">
+            <span
+              *ngFor="let techName of project.technologies"
+              class="tag"
+              [ngStyle]="{
+                color: getTechDetails(techName)?.color,
+                'background-color': getTechDetails(techName)?.backgroundColor
+              }"
+            >
+              <i [class]="getTechDetails(techName)?.iconClass"></i>
+              {{ techName }}
+            </span>
+          </div>
+          <p>{{ project.description }}</p>
+        </mat-card-content>
+      </mat-card>
+    </a>
+  </div>
+</div>
