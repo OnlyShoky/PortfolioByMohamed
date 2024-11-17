@@ -38,6 +38,14 @@ h1 {
   white-space: pre-wrap;
 }
 
+h2 {
+  color: $text-primary;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: -1.6px;
+  white-space: pre-wrap;
+}
+
 html, body {
   height: 100%;
   margin: 0;

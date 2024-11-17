@@ -4,12 +4,13 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { ScrollButtonComponent } from '../../../shared/components/scroll-button/scroll-button.component';
 import { CommonModule } from '@angular/common';
 import { AppearOnScrollDirective } from '../../../shared/directives/appear-on-scroll.directive';
+import { CreativeWorkComponent } from "./creative-work/creative-work.component";
 
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [IntroComponent,AboutMeComponent,ScrollButtonComponent,CommonModule,AppearOnScrollDirective],
+  imports: [IntroComponent, AboutMeComponent, ScrollButtonComponent, CommonModule, AppearOnScrollDirective, CreativeWorkComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

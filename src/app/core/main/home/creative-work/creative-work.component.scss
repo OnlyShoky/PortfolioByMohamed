@@ -1,0 +1,68 @@
+@import "../../../../../styles.scss";
+
+$card-bgcolor: #080808;
+
+
+
+.header-div {
+  text-align: left;
+  height: 100%;
+  width: 100%;
+}
+
+.project-link {
+  text-decoration: none;
+  color: inherit;
+  padding: 3rem;
+}
+
+.mat-grid-tile-content{
+    gap: 10rem;
+    margin-bottom: 5rem;
+}
+
+.project-card {
+  border-radius: 20px;
+  max-width: 30rem;
+  height: 25rem ;
+  background-color: $card-bgcolor;
+  color: $text-primary;
+
+  .btn {
+    max-width: fit-content;
+  }
+
+  img {
+    // object-fit:cover ;
+    // padding: 10px;
+    height: 16rem;
+    // background-color: #fafafa;
+  }
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    gap: 1rem;
+    margin-top: 8px;
+  }
+  
+//   .tag {
+//     display: flex;
+//     align-items: center;
+//     gap: 4px;
+//     padding: 4px 8px;
+//     border-radius: 4px;
+//     // background-color: #f0f0f0;
+//     font-size: 14px;
+//   }
+  
+  .tag {
+    background-color: #e0e0e0;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #333;
+  }

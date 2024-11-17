@@ -5,7 +5,13 @@
     <app-scroll-button></app-scroll-button>
   </div>
 
-  <div appAppearOnScroll class="hidden">
+  <div
+    appAppearOnScroll
+    class="hidden"
+    (elementVisible)="onElementVisible($event)"
+  >
     <app-about-me></app-about-me>
   </div>
+
+  <app-creative-work></app-creative-work>
 </div>
