@@ -1,0 +1,41 @@
+@import '../../../../../styles.scss';
+
+.keep-in-touch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10rem;
+  gap : 2rem;
+
+  h1 { 
+    margin: 0;
+   }
+  
+
+  h2{
+    margin: 0;
+
+    font-size: 1.5rem;
+    color: $text-secondary;
+  }
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+
+  .btn {
+    background-color: $button-color;
+    padding: 10px 20px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    .fab,
+    .fa-solid {
+      color: $highlight-color;
+    }
+  }
+}

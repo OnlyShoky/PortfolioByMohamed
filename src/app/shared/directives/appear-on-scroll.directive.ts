@@ -36,12 +36,12 @@ export class AppearOnScrollDirective implements OnInit {
             this.renderer.addClass(this.el.nativeElement, 'visible');
             this.elementVisible.emit(entry.isIntersecting);
 
-          } else {
-            this.renderer.removeClass(this.el.nativeElement, 'visible');
-            this.renderer.addClass(this.el.nativeElement, 'hidden');
-            this.elementVisible.emit(entry.isIntersecting);
-
-          }
+          } 
+          // else {
+          //   this.renderer.removeClass(this.el.nativeElement, 'visible');
+          //   this.renderer.addClass(this.el.nativeElement, 'hidden');
+          //   this.elementVisible.emit(entry.isIntersecting);
+          // }
         });
       },
       {

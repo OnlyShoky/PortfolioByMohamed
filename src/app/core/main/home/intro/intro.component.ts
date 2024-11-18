@@ -13,7 +13,7 @@ import { MatIconModule } from '@angular/material/icon';
 
 
 export class IntroComponent implements OnInit, OnDestroy {
-  roles: string[] = ["Software Engineer.", "AI Engineer.", "Robotics Engineer."];
+  roles: string[] = ["Software Engineer .", "AI Engineer .", "Robotics Engineer ."];
   roleIndex: number = 0;
   charIndex: number = 0;
   dynamicText: string = '';

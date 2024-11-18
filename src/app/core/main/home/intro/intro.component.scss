@@ -69,6 +69,7 @@ $image-height: 15rem;
 
     .TypingEffect {
       color: $text-primary;
+      font-family: "Permanent Marker", cursive;
       //   display: inline-block;
       border-right: 2px solid; /* Blinking cursor effect */
       white-space: nowrap;
@@ -90,9 +91,7 @@ $image-height: 15rem;
   }
 
   .description {
-    color: $text-color;
     font-size: 1.5rem;
-
     color: $text-secondary;
 
 
