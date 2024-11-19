@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
-import { Project } from '../../../../shared/models/project';
-import { ProjectsService } from '../../../../shared/services/projects.service';
+import { Project } from '../../../../shared/models/interfaces';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { NavigationEnd, Router, RouterLink } from '@angular/router';
+import { ProfileDataService } from '../../../../shared/services/ProfileData.service';
 
 export interface Tile {
   color: string;
@@ -30,8 +30,8 @@ export class CreativeWorkComponent implements OnInit {
     {text: 'Four', cols: 2, rows: 2, color: '#DDBDF1'},
   ];
 
-  constructor(private projectsService: ProjectsService,private router: Router) {
-    this.projects = this.projectsService.getProjects(3);
+  constructor(private profileDataService: ProfileDataService,private router: Router) {
+    this.projects = this.profileDataService.getProjects(3);
   }
 
   ngOnInit() {
@@ -45,7 +45,7 @@ export class CreativeWorkComponent implements OnInit {
 
   // Helper function to get technology details by name
   getTechDetails(techName: string) {
-    return this.projectsService.getTechDetails(techName);
+    return this.profileDataService.getTechDetails(techName);
   }
 
 }

@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="timeline">
+      <ng-container *ngFor="let education of educations">
+        <div class="timeline-row">
+          <div class="timeline-time">
+            {{ education.period }}<small>{{ education.location }}</small>
+          </div>
+          <div class="timeline-content">
+            <div style="display: flex; align-items: flex-start">
+              <img
+                width="48"
+                src="assets/logos/{{ education.logo }}.jpg"
+                alt="{{ education.logo }}"
+              />
+              <div style="margin-left: 1rem">
+                <h4 style="margin: 0">{{ education.degree }}</h4>
+                <small>{{ education.institution }}</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  

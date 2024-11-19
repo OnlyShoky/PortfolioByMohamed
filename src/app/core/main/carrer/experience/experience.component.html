@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="timeline">
+    <ng-container *ngFor="let experience of experiences">
+      <div class="timeline-row">
+        <div class="timeline-time">
+          {{ experience.period }}<small>{{ experience.location }}</small>
+        </div>
+        <div class="timeline-content">
+          <div style="display: flex; align-items: flex-start">
+            <img
+              width="48"
+              src="assets/logos/{{ experience.logo }}.jpg"
+              alt="{{ experience.logo }}"
+            />
+            <div style="margin-left: 1rem">
+              <h4 style="margin: 0">{{ experience.title }}</h4>
+              <small>{{ experience.company }}</small>
+            </div>
+          </div>
+          <p>{{ experience.description }}</p>
+          <div class="tags">
+            <span
+              *ngFor="let techName of experience.technologies"
+              class="tag"
+              [ngStyle]="{
+                color: getTechDetails(techName)?.color,
+                'background-color': getTechDetails(techName)?.backgroundColor
+              }"
+            >
+              <i [class]="getTechDetails(techName)?.iconClass"></i>
+              {{ techName }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
