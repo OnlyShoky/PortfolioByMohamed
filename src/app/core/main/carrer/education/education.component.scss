@@ -16,7 +16,7 @@ $color-test: #333;
     top: 0;
     left: 50%;
     margin-left: -2px;
-    border-right: 2px solid $color-test;
+    border-right: 2px solid var(--color-tertiary);;
     height: 100%;
     display: block;
 
@@ -34,7 +34,7 @@ $color-test: #333;
     top: 15px;
     text-align: right;
     margin-right: 20px;
-    color: #bcd0f7;
+    color: var(--color-secondary);
     font-size: 1.5rem;
 }
 .timeline-row .timeline-time small {
@@ -44,7 +44,7 @@ $color-test: #333;
 .timeline-row .timeline-content {
     position: relative;
     padding: 20px 30px;
-    background: $color-test;
+    background: var(--color-tertiary);
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
@@ -55,7 +55,7 @@ $color-test: #333;
     text-align: left;
     background: #080808;
     border-radius: 20px;
-    border: 2px solid #333;
+    border: 2px solid var(--color-tertiary);;
 }
 .timeline-row .timeline-content:after {
     content: "";
@@ -63,7 +63,7 @@ $color-test: #333;
     top: 20px;
     height: 2px;
     width: 1rem;
-    background: $color-test;
+    background: var(--color-tertiary);
 }
 .timeline-row .timeline-content:before {
     content: "";
@@ -76,7 +76,7 @@ $color-test: #333;
     -moz-border-radius: 100px;
     border-radius: 100px;
     z-index: 1;
-    background: $color-test;
+    background: var(--color-tertiary);
     border: 5px solid black;
 }
 .timeline-row .timeline-content h4 h3 {
@@ -97,7 +97,7 @@ $color-test: #333;
     -webkit-border-radius: 100px;
     -moz-border-radius: 100px;
     border-radius: 100px;
-    background: $color-test;
+    background: var(--color-tertiary);
     margin-bottom: 10px;
     display: inline-block;
 }

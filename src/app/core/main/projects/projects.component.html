@@ -18,6 +18,7 @@
         <img mat-card-image [src]="project.image" alt="{{ project.title }}" />
         <mat-card-content>
           <h2>{{ project.title }}</h2>
+          <p>{{ project.description }}</p>
 
           <div class="tags">
             <span
@@ -32,7 +33,6 @@
               {{ techName }}
             </span>
           </div>
-          <p>{{ project.description }}</p>
         </mat-card-content>
       </mat-card>
     </a>

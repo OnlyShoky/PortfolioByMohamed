@@ -1,5 +1,3 @@
-@import '../../../../../styles.scss';
-
 .keep-in-touch {
   display: flex;
   flex-direction: column;
@@ -17,7 +15,7 @@
     margin: 0;
 
     font-size: 1.5rem;
-    color: $text-secondary;
+    color: var(--color-secondary);
   }
 }
 
@@ -26,7 +24,7 @@
   gap: 1rem;
 
   .btn {
-    background-color: $button-color;
+    background-color: var(--button-color);
     padding: 10px 20px;
     font-size: 1rem;
     display: flex;
@@ -35,7 +33,7 @@
 
     .fab,
     .fa-solid {
-      color: $highlight-color;
+      color: var(--highlight-color);
     }
   }
 }

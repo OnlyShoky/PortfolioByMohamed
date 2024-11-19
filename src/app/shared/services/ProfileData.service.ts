@@ -23,7 +23,7 @@ export class ProfileDataService {
       link: 'https://github.com/OnlyShoky/algonimation',
       description: 'A project to visualize code using animations and charts.',
       image: 'assets/screenshot.png',
-      technologies: ['Angular', 'JavaScript', 'HTML', 'SCSS', 'Chart.js', 'Prism.js']
+      technologies: ['Angular', 'Chart.js', 'Prism.js']
     },
     {
       title: 'RoboVision',

@@ -1,80 +1,72 @@
-
-@import '../../../../../styles.scss';
-
 .about-me {
-    .about-me-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-  
-      @media (min-width: 800px) {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-  
-    .about-me-content {
-      p + p {
-        margin-top: -1rem; // Adjust the margin to add space between paragraphs
-      }
-      // .about-me-heading {
-      //   font-family: 'Ubuntu', sans-serif;
-      //   font-size: 3rem;
-      // }
-  
-      .about-me-text {
-        color: $text-secondary;
-        font-size: 1rem;
+  .about-me-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
 
-        br,strong,em {
-          color: $highlight-color;
-        }
-
-        b{
-          color: $text-primary;
-        }
-  
-
-  
-      }
-    }
-  
-    .about-me-image {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  
-      .about-me-image-container {
-        position: relative;
-        max-width: 350px;
-        max-height: 350px;
-        z-index: 1;
-
-  
-        .about-me-image-background {
-          position: absolute;
-          top: -5rem;
-          right: -5rem;
-          width: 15rem;
-          height: 15rem;
-          filter: invert(0.1);
-          z-index: -1; // Move this to the background
-
-        }
-  
-        .about-me-image-main {
-
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          border-radius: 20%;
-        }
-      }
-    }
-  
     @media (min-width: 800px) {
-      .about-me-text {
-        white-space: pre-line;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .about-me-content {
+    p + p {
+      margin-top: -1rem; // Adjust the margin to add space between paragraphs
+    }
+    // .about-me-heading {
+    //   font-family: 'Ubuntu', sans-serif;
+    //   font-size: 3rem;
+    // }
+
+    .about-me-text {
+      color: var(--color-secondary);
+      font-size: 1rem;
+
+      br,
+      strong,
+      em {
+        color: var(--highlight-color);
+      }
+
+      b {
+        color: var(--color-primary);
       }
     }
   }
-  
+
+  .about-me-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .about-me-image-container {
+      position: relative;
+      max-width: 350px;
+      max-height: 350px;
+      z-index: 1;
+
+      .about-me-image-background {
+        position: absolute;
+        top: -5rem;
+        right: -5rem;
+        width: 15rem;
+        height: 15rem;
+        filter: invert(0.1);
+        z-index: -1; // Move this to the background
+      }
+
+      .about-me-image-main {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20%;
+      }
+    }
+  }
+
+  @media (min-width: 800px) {
+    .about-me-text {
+      white-space: pre-line;
+    }
+  }
+}
