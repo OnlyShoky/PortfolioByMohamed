@@ -14,38 +14,34 @@ export class ProfileDataService {
     { name: 'HTML', iconClass: 'fab fa-html5', color: '#E34F26', backgroundColor: 'rgba(243, 133, 105, 0.2)' },
     { name: 'SCSS', iconClass: 'fab fa-sass', color: '#CC6699', backgroundColor: 'rgba(247, 185, 222, 0.2)' },
     { name: 'Chart.js', iconClass: 'fas fa-chart-bar', color: '#FF6384', backgroundColor: 'rgba(255, 182, 193, 0.2)' },
-    { name: 'Prism.js', iconClass: 'fas fa-lightbulb', color: '#9B59B6', backgroundColor: 'rgba(201, 155, 225, 0.2)' }
-  ];
-
+    { name: 'Prism.js', iconClass: 'fas fa-lightbulb', color: '#9B59B6', backgroundColor: 'rgba(201, 155, 225, 0.2)' },
+    { name: 'TypeScript', iconClass: 'fab fa-js-square', color: '#4A90E2', backgroundColor: 'rgba(180, 210, 255, 0.2)' },
+    { name: 'PyTorch', iconClass: 'fa-solid fa-fire-flame-curved', color: '#EE4C2C', backgroundColor: 'rgba(238, 76, 44, 0.2)' },
+    { name: 'Detectron2', iconClass: 'fa-solid fa-robot', color: '#FFC107', backgroundColor: 'rgba(255, 193, 7, 0.2)' },
+    { name: 'Jupyter', iconClass: 'fa-solid fa-planet-ringed', color: '#F37626', backgroundColor: 'rgba(243, 118, 38, 0.2)' },
+  ]
   private projects: Project[] = [
     {
-      title: 'Algonimation',
+      title: 'Portfolio by Mohamed',
       link: 'https://github.com/OnlyShoky/algonimation',
+      description: 'My portfolio website built with Angular 17.',
+      image: 'assets/card-thumbnails/portfolio1.png',
+      technologies: ['Angular', 'HTML', 'SCSS', 'TypeScript']
+    },
+    {
+      title: 'Algonimation',
+      link: 'https://algonimation.netlify.app',
       description: 'A project to visualize code using animations and charts.',
-      image: 'assets/screenshot.png',
+      image: 'assets/card-thumbnails/algonimation.png',
       technologies: ['Angular', 'Chart.js', 'Prism.js']
     },
     {
-      title: 'RoboVision',
-      link: 'https://github.com/OnlyShoky/algonimation',
-      description: 'A robotics project focused on object detection and tracking.',
-      image: 'assets/screenshot.png',
-      technologies: ['Python', 'Angular', 'JavaScript']
+      title: 'Semi-Supervised Object Detection',
+      link: 'https://github.com/OnlyShoky/Detectron2-STAC-SODA10m',
+      description: 'A project leveraging semi-supervised learning with STAC and Detectron2 for enhanced object detection on the SODA10m dataset.',
+      image: 'assets/card-thumbnails/smartvision.gif',
+      technologies: ['Python', 'Detectron2', 'PyTorch']
     },
-    {
-      title: 'Travel Companion',
-      link: 'https://github.com/OnlyShoky/algonimation',
-      description: 'An app to assist travelers in discovering new places and tracking visits.',
-      image: 'assets/screenshot.png',
-      technologies: ['Python', 'Angular', 'JavaScript']
-    },
-    {
-      title: 'FitTrack',
-      link: 'https://github.com/OnlyShoky/algonimation',
-      description: 'A fitness tracking app for monitoring health metrics and workout progress.',
-      image: 'assets/screenshot.png',
-      technologies: ['Python', 'Angular', 'JavaScript']
-    }
   ];
 
   private experiences: Experience[] = [
