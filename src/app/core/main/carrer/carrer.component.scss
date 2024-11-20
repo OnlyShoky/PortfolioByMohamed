@@ -3,11 +3,7 @@
     margin: 0;
     padding: 0;
   }
-  
-  body {
-    font-family: Arial, sans-serif;
-  }
-  
+
 
   .timeline-title {
     text-align: center;
@@ -26,20 +22,19 @@
     padding: 10px 20px;
     border: none;
     cursor: pointer;
-    background-color: #ddd;
-    color: #333;
+    background-color: var(--color-tertiary);
+    color: var(--color-primary);
     font-size: 1em;
     font-weight: bold;
     transition: background-color 0.3s ease;
   }
   
   .toggle-switch button.active {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--color-primary);
+    color: var(--color-tertiary);
   }
   
   .toggle-switch button:not(:last-child) {
     margin-right: 10px;
   }
-  
   

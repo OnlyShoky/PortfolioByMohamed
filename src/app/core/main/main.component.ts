@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { PreloadService } from '../../shared/services/pre-load.service';
 
 
 
@@ -11,6 +12,11 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './main.component.scss'
 })
 export class MainComponent {
+
+  constructor(preLoadService: PreloadService){
+    preLoadService.preloadLogos();
+    preLoadService.preloadImages();
+  }
 
 
 }

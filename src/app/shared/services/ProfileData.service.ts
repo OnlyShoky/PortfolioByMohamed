@@ -19,6 +19,7 @@ export class ProfileDataService {
     { name: 'PyTorch', iconClass: 'fa-solid fa-fire-flame-curved', color: '#EE4C2C', backgroundColor: 'rgba(238, 76, 44, 0.2)' },
     { name: 'Detectron2', iconClass: 'fa-solid fa-robot', color: '#FFC107', backgroundColor: 'rgba(255, 193, 7, 0.2)' },
     { name: 'Jupyter', iconClass: 'fa-solid fa-planet-ringed', color: '#F37626', backgroundColor: 'rgba(243, 118, 38, 0.2)' },
+    { name: 'SQL', iconClass: 'fas fa-database', color: '#00BFFF', backgroundColor: 'rgba(0, 191, 255, 0.2)' },
   ]
   private projects: Project[] = [
     {
@@ -57,7 +58,7 @@ export class ProfileDataService {
         'Created preprocessing pipelines for data quality improvement.',
       ],
       logo:"expleo_group_logo",
-      technologies: ['Python', 'Angular', 'JavaScript']
+      technologies: ['Python', 'PyTorch']
 
     },
     {
@@ -72,7 +73,7 @@ export class ProfileDataService {
         'Collaborated with development and validation teams for quality assurance.',
       ],
       logo:"continentale_logo",
-      technologies: ['Python', 'Angular', 'JavaScript']
+      technologies: ['Python', 'C++','ADAS']
     },
     {
       title: 'Artificial Intelligence Engineer',
@@ -86,7 +87,7 @@ export class ProfileDataService {
         'Conducted statistical analysis for trend detection.'
       ],
       logo:"govern_andorra_logo",
-      technologies: ['Python', 'Angular', 'JavaScript']
+      technologies: ['Python', 'SQL']
 
     },
     {
@@ -98,7 +99,7 @@ export class ProfileDataService {
       description: 'Developed methods for topographic image analysis and registration.',
       logo:"irt_saintex_logo",
 
-      technologies: ['Python', 'Angular', 'JavaScript']
+      technologies: ['Python']
 
     },
     {
@@ -110,7 +111,7 @@ export class ProfileDataService {
       description: 'Assessed drone-based solutions for pylon inspection using SLAM-based localization techniques.',
       logo:"altran_logo",
 
-      technologies: ['Python', 'Angular', 'JavaScript']
+      technologies: ['Python', 'C++', 'ROS']
 
     },
     {
@@ -122,7 +123,7 @@ export class ProfileDataService {
       description: 'Created Arduino communication software for a Virtual Reality booth.',
       logo:"visyon360_logo",
 
-      technologies: ['Python', 'Angular', 'JavaScript']
+      technologies: ['C#', 'Unity']
 
     },
     {
@@ -133,7 +134,7 @@ export class ProfileDataService {
       period: 'April 2017 - June 2017',
       description: 'Developed a solar tracker with enhanced precision for CPV applications.',
       logo:"laas_cnrs_logo",
-      technologies: ['Python', 'Angular', 'JavaScript']
+      technologies: ['C++']
 
     }
   ];
@@ -177,8 +178,21 @@ export class ProfileDataService {
     return this.experiences.slice(0, n);
   }
 
+  
   getEducations(n: number = this.education.length): Education[] {
     return this.education.slice(0, n);
+  }
+
+
+  getLogos(): string[] {
+    let logos = this.education.map(edu => edu.logo);
+    logos = logos.concat(this.experiences.map(exp => exp.logo));
+    return logos;
+  }
+
+  getImages(): string[] {
+    let thumbnails = this.projects.map(edu => edu.image);
+    return thumbnails;
   }
 
   
