@@ -6,6 +6,29 @@
     gap: 10rem;
     margin-top: -3rem;
   }
+
+    
+  .hidden {
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+  .fade-in-bottom {
+    visibility: visible; // Ensure visibility is set
+    animation: fade-in-bottom 0.6s linear both;
+  }
+  
+  @keyframes fade-in-bottom {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
   
   .visible {
     visibility: visible;
@@ -14,6 +37,7 @@
   .hidden {
     visibility: hidden;
   }
+
   
   .scroll-button {
     // position: relative;
@@ -22,4 +46,5 @@
     // bottom: 1rem;
     // transform: translateX(50%);
   }
-  
+
+ 

@@ -16,9 +16,25 @@ import { KeepInTouchComponent } from "./keep-in-touch/keep-in-touch.component";
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-  isScrollElementVisible = true;
+  aboutMeVisible = false;
+  creativeWorkVisible = false;
+  keepInTouchVisible = false;
 
-  onElementVisible(isVisible: boolean) {
-    this.isScrollElementVisible = !isVisible;
+  onElementVisible(isVisible: boolean, property: string) {
+
+    switch (property) {
+      case 'aboutMeVisible':
+        this.aboutMeVisible = true
+        break;
+      case 'creativeWorkVisible':
+        this.creativeWorkVisible = true;
+        break;
+      case 'keepInTouchVisible':
+        this.creativeWorkVisible = true;
+        break;
+    }
+
   }
-}
+
+  }
+

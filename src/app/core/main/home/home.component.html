@@ -1,19 +1,30 @@
 <div class="main-container">
   <app-intro></app-intro>
 
-  <div class="scroll-button" *ngIf="isScrollElementVisible">
+  <div class="scroll-button" *ngIf="!aboutMeVisible">
     <app-scroll-button></app-scroll-button>
   </div>
 
   <div
     appAppearOnScroll
     class="hidden"
-    (elementVisible)="onElementVisible($event)"
+    [ngClass]="{ 'fade-in-bottom': aboutMeVisible }"
+    (elementVisible)="onElementVisible($event, 'aboutMeVisible')"
   >
     <app-about-me></app-about-me>
   </div>
 
-  <app-creative-work appAppearOnScroll class="hidden"></app-creative-work>
-  <app-keep-in-touch appAppearOnScroll class="hidden"></app-keep-in-touch>
+  <app-creative-work
+    appAppearOnScroll
+    class="hidden"
+    [ngClass]="{ 'fade-in-bottom': creativeWorkVisible }"
+    (elementVisible)="onElementVisible($event, 'creativeWorkVisible')"
+  ></app-creative-work>
 
+  <app-keep-in-touch
+    appAppearOnScroll
+    class="hidden"
+    [ngClass]="{ 'fade-in-bottom': keepInTouchVisible }"
+    (elementVisible)="onElementVisible($event, 'keepInTouchVisible')"
+  ></app-keep-in-touch>
 </div>
