@@ -28,14 +28,6 @@ $card-bgcolor: #080808;
   color: var(--color-tertiary);
 }
 
-
-
-
-
-
-///// Test ::after
-/// 
-/// 
 .projects-container {
   display: flex;
   flex-direction: column;
@@ -86,6 +78,7 @@ $card-bgcolor: #080808;
     border-radius: 10px;
     background-color: var(--card-bgcolor);
     color: var(--color-primary);
+    border: 2px solid var(--color-tertiary);
     padding: 1rem;
     display: flex;
     flex-direction: column;
