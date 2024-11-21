@@ -24,7 +24,7 @@ export class ProfileDataService {
   private projects: Project[] = [
     {
       title: 'Portfolio by Mohamed',
-      link: 'https://github.com/OnlyShoky/algonimation',
+      link: 'https://mohamed-elmourabit.netlify.app',
       description: 'My portfolio website built with Angular 17.',
       image: 'assets/card-thumbnails/portfolio1.png',
       technologies: ['Angular', 'HTML', 'SCSS', 'TypeScript']
