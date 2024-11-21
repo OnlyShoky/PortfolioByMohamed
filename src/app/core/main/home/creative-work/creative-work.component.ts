@@ -81,11 +81,11 @@ export class CreativeWorkComponent implements OnInit {
     }
       
 
-    if (width < 700) {
+    if (width < 600) {
       this.tiles[0].cols = 6;
       this.tiles[0].rows = 2;
       this.tiles[1].cols = 6;
-      this.tiles[1].rows = 6;
+      this.tiles[1].rows = 7;
 
   }
 }
