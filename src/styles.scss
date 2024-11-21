@@ -64,3 +64,59 @@ a {
     color: var(--color-secondary);
   }
 }
+
+
+/* For screens smaller than 992px (Tablets) */
+@media screen and (max-width: 992px) {
+  h1 {
+    font-size: 3rem; /* Reduce font size for smaller screens */
+  }
+
+  h2 {
+    font-size: 1.25rem; /* Adjust font size for subheading */
+  }
+
+  html, body {
+    font-size: 16px; /* Adjust base font size */
+  }
+
+  a {
+    font-size: 1.2rem; /* Increase font size slightly for readability */
+  }
+
+  /* Additional adjustments for layout */
+  .intro-container {
+    padding: 1rem;
+  }
+}
+
+/* For screens smaller than 600px (Mobile) */
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 2.5rem; /* Further reduce font size for mobile screens */
+  }
+
+  h2 {
+    font-size: 1.2rem; /* Adjust subheading for mobile screens */
+  }
+
+  html, body {
+    font-size: 14px; /* Smaller font size for mobile */
+  }
+
+  a {
+    font-size: 1rem; /* Adjust font size for mobile devices */
+  }
+
+  /* Adjust container padding for small screens */
+  .intro-container {
+    padding: 0.5rem;
+  }
+
+  /* Make buttons stack on small screens */
+  .button-group {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}

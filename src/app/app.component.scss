@@ -30,3 +30,45 @@
     padding: 10px 0; /* This padding is fine, but make sure it’s intended */
     margin: 0; /* Remove margin */
   }
+
+  /* Media query for screens 992px or smaller */
+@media screen and (max-width: 992px) {
+  .page-container {
+    flex-direction: column;
+    gap: 1rem; /* reduce gap for smaller screens */
+    padding: 0 1rem; /* Add padding for smaller screens */
+  }
+
+  .header-content {
+    position: static; /* Let the header flow with the page */
+    width: 100%; /* Make the header width 100% of the viewport */
+    max-width: none; /* Remove max-width to allow full width on small screens */
+  }
+
+  .main-content {
+    margin-top: 5rem; /* Reduce the margin-top to account for the new header size */
+  }
+
+  .footer {
+    padding: 5px 0; /* Reduce footer padding */
+  }
+}
+
+/* Additional media query for screens smaller than 600px */
+@media screen and (max-width: 600px) {
+  .page-container {
+    padding: 0 0.5rem; /* Add more padding on very small screens */
+  }
+
+  .header-content {
+    padding: 0.5rem; /* Add padding to header for small screens */
+  }
+
+  .main-content {
+    margin-top: 4rem; /* Further adjust the margin-top */
+  }
+
+  .footer {
+    padding: 4px 0; /* Smaller footer padding */
+  }
+}

@@ -105,3 +105,56 @@ $image-height: 15rem;
     transform: translateY(0);
   }
 }
+
+
+/* Media query for screens smaller than 600px */
+@media screen and (max-width: 600px) {
+  .intro-container {
+    padding: 0.5rem; /* Add padding for very small screens */
+    gap: 1rem; /* Further reduce gap */
+    box-sizing: border-box; /* Ensure padding doesn’t push content beyond the container */
+  }
+
+  .image-container {
+    // width: 100%; /* Ensure the image container doesn't exceed the container */
+    img.intro-image {
+      width: 10rem;
+      height: 10rem;
+      left: 0; /* Adjust positioning for very small screens */
+      object-fit: cover; /* Prevent image distortion */
+    }
+
+    .intro-text {
+      font-size: 1.5rem; /* Adjust font size for intro text */
+      word-wrap: break-word; /* Ensure the text wraps properly */
+      white-space: normal; /* Allow wrapping of long text */
+      overflow-wrap: break-word; /* Ensure the text breaks within the box */
+    }
+
+    .name {
+      font-size: 5rem; /* Further reduce font size for the name */
+      word-wrap: break-word; /* Ensure name wraps if needed */
+      white-space: normal; /* Allow name to break into multiple lines if necessary */
+    }
+  }
+
+
+
+  .subheading {
+    font-size: 1.8rem; /* Further reduce font size for subheading */
+    word-wrap: break-word; /* Ensure the subheading wraps properly */
+    white-space: normal; /* Allow subheading to break into multiple lines */
+  }
+
+  .description {
+    font-size: 1.2rem; /* Adjust description font size */
+    word-wrap: break-word; /* Ensure description text wraps */
+    white-space: normal; /* Allow text to break if necessary */
+  }
+
+  .button-group {
+    flex-direction: column; /* Stack buttons on very small screens */
+    align-items: center;
+    gap: 0.5rem; /* Reduce gap between buttons */
+  }
+}

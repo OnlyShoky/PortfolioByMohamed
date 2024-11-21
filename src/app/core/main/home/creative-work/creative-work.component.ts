@@ -1,13 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, HostListener, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { Project } from '../../../../shared/models/interfaces';
-import {MatGridListModule} from '@angular/material/grid-list';
+import { MatGridListModule } from '@angular/material/grid-list';
 import { NavigationEnd, Router, RouterLink } from '@angular/router';
 import { ProfileDataService } from '../../../../shared/services/ProfileData.service';
 
 export interface Tile {
-  color: string;
   cols: number;
   rows: number;
   text: string;
@@ -16,36 +15,79 @@ export interface Tile {
 @Component({
   selector: 'app-creative-work',
   standalone: true,
-  imports: [CommonModule,MatCardModule,MatGridListModule,RouterLink],
+  imports: [CommonModule, MatCardModule, MatGridListModule, RouterLink],
   templateUrl: './creative-work.component.html',
-  styleUrl: './creative-work.component.scss'
+  styleUrls: ['./creative-work.component.scss']
 })
 export class CreativeWorkComponent implements OnInit {
-  projects : Project[];
-
+  projects: Project[] = [];
   tiles: Tile[] = [
-    {text: 'One', cols: 2, rows: 1, color: 'lightblue'},
-    {text: 'Two', cols: 2, rows: 2, color: 'lightgreen'},
-    {text: 'Three', cols: 2, rows: 2, color: 'lightpink'},
-    {text: 'Four', cols: 2, rows: 2, color: '#DDBDF1'},
+    { text: 'One', cols: 3, rows: 1,  },
+    { text: 'Two', cols: 3, rows: 2,  },
   ];
 
-  constructor(private profileDataService: ProfileDataService,private router: Router) {
-    this.projects = this.profileDataService.getProjects(3);
+  isBrowser: boolean;
+
+  constructor(
+    private profileDataService: ProfileDataService,
+    private router: Router,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {
+    this.isBrowser = isPlatformBrowser(this.platformId); // Check if running in the browser
+    if (this.isBrowser) {
+      this.projects = this.profileDataService.getProjects(3);
+    }
   }
 
   ngOnInit() {
-    this.router.events.subscribe((event) => {
-      if (event instanceof NavigationEnd) {
-        window.scrollTo(0, 0);  // Scrolls to the top of the page
-      }
-    });
-  }
+    if (this.isBrowser) {
+      this.updateTileCols(window.innerWidth);
 
+      this.router.events.subscribe((event) => {
+        if (event instanceof NavigationEnd) {
+          window.scrollTo(0, 0); // Scroll to the top of the page
+        }
+      });
+    }
+  }
 
   // Helper function to get technology details by name
   getTechDetails(techName: string) {
     return this.profileDataService.getTechDetails(techName);
   }
 
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    if (this.isBrowser) {
+      this.updateTileCols(window.innerWidth);
+    }
+  }
+
+  private updateTileCols(width: number) {
+
+
+
+      this.tiles[0].cols = 3;
+      this.tiles[0].rows = 1;
+      this.tiles[1].cols = 3;
+      this.tiles[1].rows = 3;
+
+
+    if (width < 1000) {
+      this.tiles[0].cols = 6;
+      this.tiles[0].rows = 1;
+      this.tiles[1].cols = 6;
+      this.tiles[1].rows = 4;
+    }
+      
+
+    if (width < 700) {
+      this.tiles[0].cols = 6;
+      this.tiles[0].rows = 2;
+      this.tiles[1].cols = 6;
+      this.tiles[1].rows = 6;
+
+  }
 }
+
+  }

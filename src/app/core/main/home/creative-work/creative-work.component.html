@@ -2,7 +2,7 @@
   
 <mat-grid-list cols="6" rows="2:1" class="grid-list">
   <!-- Header Tile -->
-  <mat-grid-tile [colspan]="3" [rowspan]="1" >
+  <mat-grid-tile [colspan]="tiles[0].cols" [rowspan]="tiles[0].rows" >
     <div class="header-div" >
       <h2>All Creative Works.</h2>
       <p>
@@ -14,7 +14,7 @@
 
   <!-- Project Tiles -->
   <ng-container *ngFor="let project of projects">
-    <mat-grid-tile [colspan]="3" [rowspan]="3" class="project-tile">
+    <mat-grid-tile [colspan]="tiles[1].cols" [rowspan]="tiles[1].rows" class="project-tile">
       <a [href]="project.link" target="_blank" class="project-link">
         <mat-card class="project-card">
           <img mat-card-image [src]="project.image" alt="{{ project.title }}" />
