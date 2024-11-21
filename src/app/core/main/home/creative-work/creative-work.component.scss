@@ -4,39 +4,11 @@ $card-bgcolor: #080808;
   color: var(--highlight-color);
 }
 
-.header-div {
-  text-align: left;
-  height: 100%;
-  width: 100%;
-}
-
-.project-link {
-  text-decoration: none;
-  color: inherit;
-  padding: 3rem;
-}
-
-.mat-grid-tile-content {
-  gap: 10rem;
-  margin-bottom: 5rem;
-}
-
 
 .project-card {
-  border-radius: 20px;
-  max-width: 30rem;
-  height: 25rem;
   background-color: $card-bgcolor;
   color: var(--color-primary);
-  margin: 0 1rem;
 
-  .btn {
-    max-width: fit-content;
-  }
-
-  img {
-    height: 16rem;
-  }
 }
 
 .tags {
@@ -57,39 +29,86 @@ $card-bgcolor: #080808;
 }
 
 
-/* Media query for screens smaller than 600px */
-@media (max-width: 1000px) {
-  .project-link{
-    max-width: 100%;
+
+
+
+
+///// Test ::after
+/// 
+/// 
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.projects-left,
+.projects-right,
+.projects-left-right {
+  width: 100%;
+}
+
+.projects-left-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.project-item {
+  width: 48%; /* Take roughly half the width */
+  margin-bottom: 2rem;
+  margin-top: -12rem;
+
+  &.left {
+    align-self: flex-start; /* Align items to the left */
+  }
+
+  &.right {
+    align-self: flex-end; /* Align items to the right */
+  }
+
+  @media screen and (max-width: 900px) {
+    width: 100%; /* Full width on small screens */
+    align-self: center; /* Center align all items */
+    margin-top: 0;
+
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
   }
 
   .project-card {
-    max-width: 100%; /* Make the card take full width */
-    height: auto; /* Allow the height to adjust based on content */
-    margin-top: 5rem;
-  }
+    border-radius: 10px;
+    background-color: var(--card-bgcolor);
+    color: var(--color-primary);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 
-  .project-card img {
-    height: 12rem; /* Reduce the height of the image on small screens */
-  }
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 10px;
+    }
 
-  .card-content {
-    padding: 0.5rem; /* Adjust padding for small screens */
-  }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
 
-  .title {
-    font-size: 1.2rem; /* Adjust font size for the title on small screens */
-  }
-
-  .description {
-    font-size: 0.9rem; /* Adjust font size for the description on small screens */
-  }
-
-  .tags {
-    gap: 0.5rem; /* Reduce gap between tags on small screens */
-  }
-
-  .tag {
-    font-size: 10px; /* Adjust the font size for tags on small screens */
+    .tag {
+      padding: 0.5rem;
+      font-size: 0.8rem;
+      border-radius: 5px;
+    }
   }
 }
+

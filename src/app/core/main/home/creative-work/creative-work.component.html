@@ -1,20 +1,21 @@
 
-  
-<mat-grid-list cols="6" rows="2:1" class="grid-list">
-  <!-- Header Tile -->
-  <mat-grid-tile [colspan]="tiles[0].cols" [rowspan]="tiles[0].rows" >
-    <div class="header-div" >
-      <h2>All Creative Works.</h2>
-      <p>
+
+<div class="projects-container">
+  <div class="projects-left">
+    <h2>All Creative Works.</h2>
+    <p>
       Here's some of my projects that I have worked on.
       <br><a class="explore-link" routerLink="/projects"><b>Explore more →</b></a>
-      </p>
-    </div>
-  </mat-grid-tile>
+    </p>
+  </div>
 
-  <!-- Project Tiles -->
-  <ng-container *ngFor="let project of projects">
-    <mat-grid-tile [colspan]="tiles[1].cols" [rowspan]="tiles[1].rows" class="project-tile">
+  <div class="projects-left-right">
+    <div
+    *ngFor="let project of projects; let i = index"
+    class="project-item"
+    [class.right]="i % 2 === 0"
+    [class.left]="i % 2 !== 0"
+  >
       <a [href]="project.link" target="_blank" class="project-link">
         <mat-card class="project-card">
           <img mat-card-image [src]="project.image" alt="{{ project.title }}" />
@@ -37,6 +38,7 @@
           </mat-card-content>
         </mat-card>
       </a>
-    </mat-grid-tile>
-  </ng-container>
-</mat-grid-list>
+    </div>
+  </div>
+</div>
+
