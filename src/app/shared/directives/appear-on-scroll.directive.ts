@@ -31,7 +31,7 @@ export class AppearOnScrollDirective implements OnInit {
     this.observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.intersectionRatio > 0.5) { // Visible when more than 50% in view
+          if (entry.intersectionRatio > 0.2) { // Visible when more than 50% in view
             this.renderer.removeClass(this.el.nativeElement, 'hidden');
             this.renderer.addClass(this.el.nativeElement, 'visible');
             this.elementVisible.emit(entry.isIntersecting);
@@ -47,7 +47,7 @@ export class AppearOnScrollDirective implements OnInit {
       {
         root: null, // viewport
         rootMargin: '0px',
-        threshold: [0.5] // Trigger when 50% of the element is in view
+        threshold: [0.2] // Trigger when 50% of the element is in view
       }
     );
   }
