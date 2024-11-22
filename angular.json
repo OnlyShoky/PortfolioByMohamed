@@ -30,7 +30,12 @@
               "src/_redirects",
               "src/netlify.toml",
               "src/robots.txt",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "_redirects",
+                "input": "src",
+                "output": "/"
+              }
             ],
             "styles": [
               "src/styles.scss",
