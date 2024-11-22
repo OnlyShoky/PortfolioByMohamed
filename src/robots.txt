@@ -1,0 +1,15 @@
+# Allow all bots to access the site
+User-agent: *
+
+# Disallow crawling sensitive or irrelevant files
+Disallow: /assets/  # Prevent indexing of assets like images, scripts, etc.
+Disallow: /environment/
+Disallow: /node_modules/
+Disallow: /package.json
+Disallow: /package-lock.json
+
+# Allow crawling of main pages
+Allow: /
+
+# Define the sitemap
+Sitemap: https://mohamed-elmourabit.netlify.app/sitemap.xml
