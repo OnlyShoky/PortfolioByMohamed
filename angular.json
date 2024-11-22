@@ -27,15 +27,8 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/assets/favicon.ico",
-              "src/_redirects",
-              "src/netlify.toml",
               "src/robots.txt",
-              "src/assets",
-              {
-                "glob": "_redirects",
-                "input": "src",
-                "output": "/"
-              }
+              "src/assets"
             ],
             "styles": [
               "src/styles.scss",
