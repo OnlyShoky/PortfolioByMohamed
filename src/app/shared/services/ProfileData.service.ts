@@ -22,6 +22,14 @@ export class ProfileDataService {
     { name: 'SQL', iconClass: 'fas fa-database', color: '#00BFFF', backgroundColor: 'rgba(0, 191, 255, 0.2)' },
   ]
   private projects: Project[] = [
+
+    {
+      title: 'Animalgo',
+      link: 'https://animalgo.netlify.app',
+      description: 'Procedural animation using constraints and physics.',
+      image: 'assets/card-thumbnails/animalgo.png',
+      technologies: ['Angular', 'HTML', 'SCSS', 'TypeScript']
+    },
     {
       title: 'Portfolio by Mohamed',
       link: 'https://mohamed-elmourabit.netlify.app',
