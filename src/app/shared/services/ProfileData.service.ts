@@ -20,8 +20,20 @@ export class ProfileDataService {
     { name: 'Detectron2', iconClass: 'fa-solid fa-robot', color: '#FFC107', backgroundColor: 'rgba(255, 193, 7, 0.2)' },
     { name: 'Jupyter', iconClass: 'fa-solid fa-planet-ringed', color: '#F37626', backgroundColor: 'rgba(243, 118, 38, 0.2)' },
     { name: 'SQL', iconClass: 'fas fa-database', color: '#00BFFF', backgroundColor: 'rgba(0, 191, 255, 0.2)' },
+    { name: 'Django', iconClass: 'fab fa-python', color: '#9EDF9C', backgroundColor: 'rgba(0, 211, 131, 0.2)' }, // Added Django
+    { name: 'Docker', iconClass: 'fab fa-docker', color: '#2496ED', backgroundColor: 'rgba(36, 150, 237, 0.2)' }, // Added Docker
+    { name: 'Google Cloud', iconClass: 'fab fa-google', color: '#4285F4', backgroundColor: 'rgba(66, 133, 244, 0.2)' }, // Added Google Cloud
+
   ]
   private projects: Project[] = [
+
+    {
+      title: 'Meal Prep Codex',
+      link: 'https://prepweek.ew.r.appspot.com/', // Replace with your actual link
+      description: 'A meal planning and recipe management application built with Django, Python, Docker, and hosted on Google Cloud.',
+      image: 'assets/card-thumbnails/mealprep.png', // Add an image for this project
+      technologies: ['Django', 'Docker', 'Google Cloud','SQL']
+    },
 
     {
       title: 'Animalgo',
