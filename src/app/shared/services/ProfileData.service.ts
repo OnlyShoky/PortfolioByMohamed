@@ -29,7 +29,7 @@ export class ProfileDataService {
 
     {
       title: 'Meal Prep Codex',
-      link: 'https://prepweek.ew.r.appspot.com/', // Replace with your actual link
+      link: 'https://github.com/OnlyShoky/recipe_project', // Replace with your actual link
       description: 'A meal planning and recipe management application built with Django, Python, Docker, and hosted on Google Cloud.',
       image: 'assets/card-thumbnails/mealprep.png', // Add an image for this project
       technologies: ['Django', 'Docker', 'Google Cloud','SQL']
