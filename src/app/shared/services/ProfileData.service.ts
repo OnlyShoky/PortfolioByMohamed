@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Project,Experience,Education } from '../models/interfaces';
+import { Project, Experience, Education } from '../models/interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -23,6 +23,13 @@ export class ProfileDataService {
     { name: 'Django', iconClass: 'fab fa-python', color: '#9EDF9C', backgroundColor: 'rgba(0, 211, 131, 0.2)' }, // Added Django
     { name: 'Docker', iconClass: 'fab fa-docker', color: '#2496ED', backgroundColor: 'rgba(36, 150, 237, 0.2)' }, // Added Docker
     { name: 'Google Cloud', iconClass: 'fab fa-google', color: '#4285F4', backgroundColor: 'rgba(66, 133, 244, 0.2)' }, // Added Google Cloud
+    { name: 'Flask', iconClass: 'fas fa-flask', color: 'white', backgroundColor: 'rgba(130, 130, 130, 0.2)' },
+    { name: 'OpenCV', iconClass: 'fas fa-eye', color: '#5C3EE8', backgroundColor: 'rgba(92, 62, 232, 0.2)' },
+    { name: 'FFmpeg', iconClass: 'fas fa-video', color: '#007808', backgroundColor: 'rgba(0, 120, 8, 0.2)' },
+    { name: 'Raspberry Pi', iconClass: 'fas fa-raspberry-pi', color: '#C51A4A', backgroundColor: 'rgba(197, 26, 74, 0.2)' },
+    { name: 'Systemd', iconClass: 'fas fa-cogs', color: '#0E4EF0', backgroundColor: 'rgba(14, 78, 240, 0.2)' },
+    { name: 'Linux', iconClass: 'fab fa-linux', color: '#FCC624', backgroundColor: 'rgba(252, 198, 36, 0.2)' },
+    { name: 'PyAudio', iconClass: 'fas fa-microphone', color: '#1DB954', backgroundColor: 'rgba(29, 185, 84, 0.2)' }
 
   ]
   private projects: Project[] = [
@@ -32,7 +39,15 @@ export class ProfileDataService {
       link: 'https://github.com/OnlyShoky/recipe_project', // Replace with your actual link
       description: 'A meal planning and recipe management application built with Django, Python, Docker, and hosted on Google Cloud.',
       image: 'assets/card-thumbnails/mealprep.png', // Add an image for this project
-      technologies: ['Django', 'Docker', 'Google Cloud','SQL']
+      technologies: ['Django', 'Docker', 'Google Cloud', 'SQL']
+    },
+
+    {
+      title: 'Pi Baby Monitor',
+      link: 'https://github.com/OnlyShoky/pibabymonitor',
+      description: 'A Raspberry Pi baby monitor system with live video/audio streaming using Flask and OpenCV. Features systemd service integration for automatic startup.',
+      image: 'assets/card-thumbnails/pibabymonitor.png',
+      technologies: ['Python', 'OpenCV', 'Flask', 'FFmpeg']
     },
 
     {
@@ -77,7 +92,7 @@ export class ProfileDataService {
         'Developed ANN and CNN models using PointNet on the Nuscenes dataset.',
         'Created preprocessing pipelines for data quality improvement.',
       ],
-      logo:"expleo_group_logo",
+      logo: "expleo_group_logo",
       technologies: ['Python', 'PyTorch']
 
     },
@@ -92,8 +107,8 @@ export class ProfileDataService {
         'Developed and maintained radar algorithms in C/C++.',
         'Collaborated with development and validation teams for quality assurance.',
       ],
-      logo:"continentale_logo",
-      technologies: ['Python', 'C++','ADAS']
+      logo: "continentale_logo",
+      technologies: ['Python', 'C++', 'ADAS']
     },
     {
       title: 'Artificial Intelligence Engineer',
@@ -106,7 +121,7 @@ export class ProfileDataService {
         'Standardized address data using FuzzyWuzzy and RegEx.',
         'Conducted statistical analysis for trend detection.'
       ],
-      logo:"govern_andorra_logo",
+      logo: "govern_andorra_logo",
       technologies: ['Python', 'SQL']
 
     },
@@ -117,7 +132,7 @@ export class ProfileDataService {
       duration: '6 months',
       period: 'March 2020 - August 2020',
       description: 'Developed methods for topographic image analysis and registration.',
-      logo:"irt_saintex_logo",
+      logo: "irt_saintex_logo",
 
       technologies: ['Python']
 
@@ -129,7 +144,7 @@ export class ProfileDataService {
       duration: '6 months',
       period: 'September 2019 - February 2020',
       description: 'Assessed drone-based solutions for pylon inspection using SLAM-based localization techniques.',
-      logo:"altran_logo",
+      logo: "altran_logo",
 
       technologies: ['Python', 'C++', 'ROS']
 
@@ -141,7 +156,7 @@ export class ProfileDataService {
       duration: '5 months',
       period: 'April 2019 - August 2019',
       description: 'Created Arduino communication software for a Virtual Reality booth.',
-      logo:"visyon360_logo",
+      logo: "visyon360_logo",
 
       technologies: ['C#', 'Unity']
 
@@ -153,12 +168,12 @@ export class ProfileDataService {
       duration: '3 months',
       period: 'April 2017 - June 2017',
       description: 'Developed a solar tracker with enhanced precision for CPV applications.',
-      logo:"laas_cnrs_logo",
+      logo: "laas_cnrs_logo",
       technologies: ['C++']
 
     }
   ];
-  
+
   private education: Education[] = [
     {
       institution: 'Université Paul Sabatier Toulouse III - UPSSITECH',
@@ -166,10 +181,10 @@ export class ProfileDataService {
       degree: 'Robotic and Interactive Systems (SRI)',
       field: 'Robotics Engineering',
       duration: '3 years',
-      logo:"upssitech_logo",
+      logo: "upssitech_logo",
 
       period: '2017 - 2020'
-      
+
     },
     {
       institution: 'IUT Paul Sabatier',
@@ -178,7 +193,7 @@ export class ProfileDataService {
       degree: 'DUT Electrical Engineering and Industrial Computing',
       field: 'Electrical engineering technologies / technicians',
       duration: '2 years',
-      logo:"iut_paul_sabatier_logo",
+      logo: "iut_paul_sabatier_logo",
 
       period: '2015 - 2017'
     },
@@ -188,7 +203,7 @@ export class ProfileDataService {
       degree: 'Scientific Baccalaureate',
       field: 'Mathematics',
       duration: '3 years',
-      logo:"lcf_logo",
+      logo: "lcf_logo",
 
       period: '2011 - 2014'
     }
@@ -198,7 +213,7 @@ export class ProfileDataService {
     return this.experiences.slice(0, n);
   }
 
-  
+
   getEducations(n: number = this.education.length): Education[] {
     return this.education.slice(0, n);
   }
@@ -215,7 +230,7 @@ export class ProfileDataService {
     return thumbnails;
   }
 
-  
+
   getProjects(n: number = this.projects.length): Project[] {
     return this.projects.slice(0, n);
   }
