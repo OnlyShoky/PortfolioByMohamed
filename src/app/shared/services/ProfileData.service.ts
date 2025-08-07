@@ -29,10 +29,24 @@ export class ProfileDataService {
     { name: 'Raspberry Pi', iconClass: 'fas fa-raspberry-pi', color: '#C51A4A', backgroundColor: 'rgba(197, 26, 74, 0.2)' },
     { name: 'Systemd', iconClass: 'fas fa-cogs', color: '#0E4EF0', backgroundColor: 'rgba(14, 78, 240, 0.2)' },
     { name: 'Linux', iconClass: 'fab fa-linux', color: '#FCC624', backgroundColor: 'rgba(252, 198, 36, 0.2)' },
-    { name: 'PyAudio', iconClass: 'fas fa-microphone', color: '#1DB954', backgroundColor: 'rgba(29, 185, 84, 0.2)' }
+    { name: 'PyAudio', iconClass: 'fas fa-microphone', color: '#1DB954', backgroundColor: 'rgba(29, 185, 84, 0.2)' },
+    {
+      name: 'TailwindCSS',
+      iconClass: 'fas fa-wind',
+      color: '#38BDF8',
+      backgroundColor: 'rgba(56, 189, 248, 0.2)'
+    },
 
   ]
   private projects: Project[] = [
+
+    {
+      title: 'Neonys',
+      link: 'https://neonys.netlify.app',
+      description: 'A futuristic, responsive landing page built with TailwindCSS, designed for automation and digital transformation services. Features smooth scrolling, animated components, and modular HTML/CSS/JS structure.',
+      image: 'assets/card-thumbnails/neonys.png',
+      technologies: ['HTML', 'CSS', 'JavaScript', 'TailwindCSS', 'Font Awesome']
+    },
 
     {
       title: 'Meal Prep Codex',
