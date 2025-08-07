@@ -43,9 +43,9 @@ export class ProfileDataService {
     {
       title: 'Neonys',
       link: 'https://neonys.netlify.app',
-      description: 'A futuristic, responsive landing page built with TailwindCSS, designed for automation and digital transformation services. Features smooth scrolling, animated components, and modular HTML/CSS/JS structure.',
+      description: 'A futuristic, responsive landing page designed for automation and digital transformation services.',
       image: 'assets/card-thumbnails/neonys.png',
-      technologies: ['HTML', 'CSS', 'JavaScript', 'TailwindCSS', 'Font Awesome']
+      technologies: ['HTML', 'CSS', 'JavaScript', 'TailwindCSS']
     },
 
     {
