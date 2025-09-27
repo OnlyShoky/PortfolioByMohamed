@@ -1,7 +1,9 @@
 import { isPlatformBrowser } from '@angular/common';
-import { Component, Inject, OnDestroy, OnInit, Pipe, PLATFORM_ID, signal } from '@angular/core';
+import { Component, Inject, OnDestroy, OnInit, PLATFORM_ID, signal, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { TranslationService } from '../../../../shared/services/translation';
+import { debug } from 'console';
 
 @Component({
   selector: 'app-intro',
@@ -10,10 +12,10 @@ import { MatIconModule } from '@angular/material/icon';
   templateUrl: './intro.component.html',
   styleUrl: './intro.component.scss'
 })
-
-
 export class IntroComponent implements OnInit, OnDestroy {
-  roles: string[] = ["Software Engineer .", "AI Engineer .", "Robotics Engineer ."];
+  private translationService = inject(TranslationService);
+
+  roles: string[] = [];
   roleIndex: number = 0;
   charIndex: number = 0;
   dynamicText: string = '';
@@ -27,8 +29,14 @@ export class IntroComponent implements OnInit, OnDestroy {
   constructor(@Inject(PLATFORM_ID) private platformId: object) {}
 
   ngOnInit(): void {
+    // Cargar roles traducidos
+    this.roles = [
+      this.getTranslation('intro.dynamicRoles.0'),
+      this.getTranslation('intro.dynamicRoles.1'),
+      this.getTranslation('intro.dynamicRoles.2')
+    ];
+
     if (isPlatformBrowser(this.platformId)) {
-      // this.startTypingEffect();
       this.startTypingEffectPipe();
     }
   }
@@ -39,30 +47,17 @@ export class IntroComponent implements OnInit, OnDestroy {
     }
   }
 
-  startTypingEffect(): void {
-    if (this.typing) {
-      if (this.charIndex < this.roles[this.roleIndex].length) {
-        this.dynamicText += this.roles[this.roleIndex].charAt(this.charIndex);
-        this.charIndex++;
-        this.animationFrameId = window.requestAnimationFrame(() => this.delayedStart(this.typingDelay));
-      } else {
-        this.typing = false;
-        this.animationFrameId = window.requestAnimationFrame(() => this.delayedStart(this.nextRoleDelay));
-      }
-    } else {
-      if (this.charIndex > 0) {
-        this.dynamicText = this.roles[this.roleIndex].substring(0, this.charIndex - 1);
-        this.charIndex--;
-        this.animationFrameId = window.requestAnimationFrame(() => this.delayedStart(this.erasingDelay));
-      } else {
-        this.typing = true;
-        this.roleIndex = (this.roleIndex + 1) % this.roles.length;
-        this.animationFrameId = window.requestAnimationFrame(() => this.delayedStart(this.typingDelay));
-      }
-    }
+  getTranslation(key: string): string {
+    
+    return this.translationService.getTranslation(key);
   }
 
-  startTypingEffectPipe(): void {
+  startTypingEffectPipe(): void {   
+    this.roles = [
+      this.getTranslation('intro.dynamicRoles.0'),
+      this.getTranslation('intro.dynamicRoles.1'),
+      this.getTranslation('intro.dynamicRoles.2')
+    ];
     if (this.typing) {
       if (this.charIndex < this.roles[this.roleIndex].length) {
         this.dynamicTextPipe.update(() => this.roles[this.roleIndex].substring(0, this.charIndex + 1));
@@ -83,12 +78,6 @@ export class IntroComponent implements OnInit, OnDestroy {
         this.animationFrameId = window.requestAnimationFrame(() => this.delayedStartPipe(this.typingDelay));
       }
     }
-  }
-
-  delayedStart(delay: number): void {
-    setTimeout(() => {
-      this.startTypingEffect();
-    }, delay);
   }
 
   delayedStartPipe(delay: number): void {

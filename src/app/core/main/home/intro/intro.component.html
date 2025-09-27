@@ -1,49 +1,43 @@
 <div class="intro-container">
-    <div class="slide-fade">
-      <div class="image-container">
-        <img class="intro-image" src="https://svgsilh.com/svg/36402.svg" alt="Image">
-        <p class="intro-text">Hey there!, I'm-</p>
-        <h1 class="name">Mohamed</h1>
-        <h1 class="name">El Mourabit.</h1>
-      </div>
-        
-    <div class="slide-fade">
-        <h2 class="subheading">
-          <!-- <span class="TypingEffect">{{ dynamicText}} </span> -->
-          <span class="TypingEffect"> <br> {{ dynamicTextPipe()}} </span> 
-          <span><br>With a passion for programming. Driven by curiosity, I bring innovation and technical expertise to every project.</span>
-        </h2>
-      </div>
+  <div class="slide-fade">
+    <div class="image-container">
+      <img class="intro-image" src="https://svgsilh.com/svg/36402.svg" alt="Image">
+      <p class="intro-text">{{ getTranslation('intro.greeting') }}</p>
+      <h1 class="name">{{ getTranslation('intro.name1') }}</h1>
+      <h1 class="name">{{ getTranslation('intro.name2') }}</h1>
+    </div>
       
-  
+    <div class="slide-fade">
+      <h2 class="subheading">
+        <span class="TypingEffect"><br> {{ dynamicTextPipe() }} </span> 
+        <span><br>{{ getTranslation('intro.description') }}</span>
+      </h2>
+    </div>
+    
     <div class="slide-fade">
       <p class="description">
-        🤖 I am a passionate robotics engineer and software creator, always exploring new technologies.        <br>
+        {{ getTranslation('intro.about') }} <br>
         <span>
-          🚀 Currently focused on AI, C++, Python, and full-stack development.
+          {{ getTranslation('intro.focus') }}
         </span>
       </p>
     </div>
   
     <div class="slide-fade">
       <div class="button-group">
-        <a  mat-button href="https://github.com/OnlyShoky" target="_blank" class="btn">
+        <a mat-button href="https://github.com/OnlyShoky" target="_blank" class="btn">
           <i class="fab fa-github"></i>
-          Github
-
+          {{ getTranslation('intro.github') }}
         </a>
-        <a  mat-button href="https://www.linkedin.com/in/mohamed-el-mourabit-agharbi/" target="_blank" class="btn">
-            <i class="fab fa-linkedin"></i>
-            Linkedin
-  
-          </a>
-          <a  mat-button href="assets/CV_English.pdf" download="Mohamed-EL-MOURABIT_CV.pdf" class="btn">
-
-            <i class="fa-solid fa-download"></i>
-            Download CV 
-
-          </a>
+        <a mat-button href="https://www.linkedin.com/in/mohamed-el-mourabit-agharbi/" target="_blank" class="btn">
+          <i class="fab fa-linkedin"></i>
+          {{ getTranslation('intro.linkedin') }}
+        </a>
+        <a mat-button href="assets/CV_English.pdf" download="Mohamed-EL-MOURABIT_CV.pdf" class="btn">
+          <i class="fa-solid fa-download"></i>
+          {{ getTranslation('intro.downloadCV') }}
+        </a>
       </div>
     </div>
   </div>
-  
+</div>

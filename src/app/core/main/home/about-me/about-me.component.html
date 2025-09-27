@@ -1,31 +1,18 @@
 <div class="about-me fade-in-bottom">
-    <div class="about-me-grid">
-      <div class="about-me-content">
-        <h2 class="about-me-heading">⚡ About Me</h2>
-          <p class="about-me-text">
-            I hold a degree in <strong>Robotics Engineering</strong> and a <strong>DUT in Electrical Engineering and Industrial Computing</strong>. This 
-            educational background has given me a solid understanding of both low-level and high-level programming. 
-            Curiosity drives me, and I am passionate about <b>creating and programming</b>—whether it's 
-            for robots, machines, or software design.
-        </p>
-        <p class="about-me-text">
-            <br>Besides my technical skills, I am also deeply invested in exploring the world. I love traveling, experiencing 
-            new cultures, and meeting people from different backgrounds. Volleyball is one of my favorite sports, and I enjoy 
-            staying active and engaged.
-        </p>
-        <p class="about-me-text">
-            <br>Currently, my focus is on expanding my expertise in <strong>Artificial Intelligence</strong> and robotics. 
-            I am actively learning and improving in <strong>C++, Python, and TypeScript. </strong> I’m also on an exciting journey to master 
-            <b>full-stack web development</b>, building skills in both front-end and <b>back-end technologies.</b>
-        </p>
-        
-      </div>
-      <div class="about-me-image">
-        <div class="about-me-image-container">
-          <img class="about-me-image-background" src="https://svgsilh.com/svg/36402.svg" alt="background" />
-          <img class="about-me-image-main" src="/assets/about-me.jpg" alt="Mohamed EL MOURABIT" />
-        </div>
+  <div class="about-me-grid">
+    <div class="about-me-content">
+      <h2 class="about-me-heading">{{ getTranslation('about.title') }}</h2>
+      
+      <p class="about-me-text" [innerHTML]="getTranslation('about.paragraph1')"></p>
+      <p class="about-me-text" [innerHTML]="getTranslation('about.paragraph2')"></p>
+      <p class="about-me-text" [innerHTML]="getTranslation('about.paragraph3')"></p>
+    </div>
+
+    <div class="about-me-image">
+      <div class="about-me-image-container">
+        <img class="about-me-image-background" src="https://svgsilh.com/svg/36402.svg" alt="background" />
+        <img class="about-me-image-main" src="/assets/about-me.jpg" alt="Mohamed EL MOURABIT" />
       </div>
     </div>
   </div>
-  
+</div>

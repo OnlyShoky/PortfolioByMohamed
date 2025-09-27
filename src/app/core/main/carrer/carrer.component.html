@@ -1,11 +1,11 @@
 <div class="timeline-container">
-    <h1 class="timeline-title">Career & Studies</h1>
+    <h1 class="timeline-title">{{ getTranslation('career.title') }}</h1>
     
 
       
     <div class="toggle-switch">
-      <button mat-button (click)="showExperience = true" [class.active]="showExperience" >Experience</button>
-      <button mat-button (click)="showExperience = false" [class.active]="!showExperience">Education</button>
+      <button mat-button (click)="showExperience = true" [class.active]="showExperience" >{{ getTranslation('career.experience') }}</button>
+      <button mat-button (click)="showExperience = false" [class.active]="!showExperience">{{ getTranslation('career.education') }}</button>
     </div>
   
     <!-- Timeline Section -->

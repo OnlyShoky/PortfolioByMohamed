@@ -30,6 +30,8 @@ export class ProfileDataService {
     { name: 'Systemd', iconClass: 'fas fa-cogs', color: '#0E4EF0', backgroundColor: 'rgba(14, 78, 240, 0.2)' },
     { name: 'Linux', iconClass: 'fab fa-linux', color: '#FCC624', backgroundColor: 'rgba(252, 198, 36, 0.2)' },
     { name: 'PyAudio', iconClass: 'fas fa-microphone', color: '#1DB954', backgroundColor: 'rgba(29, 185, 84, 0.2)' },
+    { name: 'N8N', iconClass: 'fa-solid fa-arrows-spin', color: '#E34F26', backgroundColor: 'rgba(243, 133, 105, 0.2)' },
+
     {
       name: 'TailwindCSS',
       iconClass: 'fas fa-wind',
@@ -42,10 +44,10 @@ export class ProfileDataService {
 
     {
       title: 'Neonys',
-      link: 'https://neonys.netlify.app',
+      link: 'https://neonys.fr',
       description: 'A futuristic, responsive landing page designed for automation and digital transformation services.',
       image: 'assets/card-thumbnails/neonys.png',
-      technologies: ['HTML', 'CSS', 'JavaScript', 'TailwindCSS']
+      technologies: ['HTML', 'CSS', 'JavaScript', 'TailwindCSS', 'N8N']
     },
 
     {
@@ -100,7 +102,7 @@ export class ProfileDataService {
       company: 'Expleo Group',
       location: 'Toulouse, Occitanie, France',
       duration: '1 year 8 months',
-      period: 'April 2023 - Present',
+      period: 'April 2023 - December 2024',
       description: 'Worked on data fusion and object detection for autonomous vehicles, enhancing detection accuracy with advanced AI models.',
       responsibilities: [
         'Developed ANN and CNN models using PointNet on the Nuscenes dataset.',

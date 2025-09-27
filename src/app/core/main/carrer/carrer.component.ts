@@ -1,9 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { TemplateComponent } from "./template/template.component";
 import { EducationComponent } from "./education/education.component";
 import { ExperienceComponent } from './experience/experience.component';
 import { MatButtonModule } from '@angular/material/button';
+import { TranslationService } from '../../../shared/services/translation';
 
 @Component({
   selector: 'app-carrer',
@@ -18,4 +19,10 @@ export class CarrerComponent {
   toggleExperience(isExperience: boolean) {
     this.showExperience = isExperience;
   }
+  private translationService = inject(TranslationService);
+
+  getTranslation(key: string): string {
+    return this.translationService.getTranslation(key);
+  }
 }
+

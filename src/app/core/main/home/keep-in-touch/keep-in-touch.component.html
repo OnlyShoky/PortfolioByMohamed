@@ -1,17 +1,16 @@
 <div class="keep-in-touch">
-  <h1>Keep in Touch.</h1>
-  <h2>Feel free to connect with me.</h2>
-
+  <h1>{{ getTranslation('contact.title') }}</h1>
+  <h2>{{ getTranslation('contact.subtitle') }}</h2>
 
   <div class="slide-fade">
     <div class="button-group">
-        <a
+      <a
         mat-button
         href="mailto:mohamed.elmoag@gmail.com?subject=Contact&body=Hello Mohamed,"
         class="btn"
       >
         <i class="fa-solid fa-envelope"></i>
-        Send Email
+        {{ getTranslation('contact.sendEmail') }}
       </a>
       <a
         mat-button
@@ -20,7 +19,7 @@
         class="btn"
       >
         <i class="fab fa-linkedin"></i>
-        Linkedin
+        {{ getTranslation('contact.linkedin') }}
       </a>
       <a
         mat-button
@@ -29,7 +28,7 @@
         class="btn"
       >
         <i class="fa-solid fa-download"></i>
-        Download CV
+        {{ getTranslation('contact.downloadCV') }}
       </a>
     </div>
   </div>

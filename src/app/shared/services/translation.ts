@@ -36,8 +36,8 @@ export class TranslationService {
       about: {
         title: "⚡ About Me",
         paragraph1: "I hold a degree in <strong>Robotics Engineering</strong> and a <strong>DUT in Electrical Engineering and Industrial Computing</strong>. This educational background has given me a solid understanding of both low-level and high-level programming. Curiosity drives me, and I am passionate about <b>creating and programming</b>—whether it's for robots, machines, or software design.",
-        paragraph2: "Besides my technical skills, I am also deeply invested in exploring the world. I love traveling, experiencing new cultures, and meeting people from different backgrounds. Volleyball is one of my favorite sports, and I enjoy staying active and engaged.",
-        paragraph3: "Currently, my focus is on expanding my expertise in <strong>Artificial Intelligence</strong> and robotics. I am actively learning and improving in <strong>C++, Python, and TypeScript.</strong> I'm also on an exciting journey to master <b>full-stack web development</b>, building skills in both front-end and <b>back-end technologies.</b>"
+        paragraph2: "\nBesides my technical skills, I am also deeply invested in exploring the world. I love traveling, experiencing new cultures, and meeting people from different backgrounds. Volleyball is one of my favorite sports, and I enjoy staying active and engaged.",
+        paragraph3: "\nCurrently, my focus is on expanding my expertise in <strong>Artificial Intelligence</strong> and robotics. I am actively learning and improving in <strong>C++, Python, and TypeScript.</strong> I'm also on an exciting journey to master <b>full-stack web development</b>, building skills in both front-end and <b>back-end technologies.</b>"
       },
       career: {
         title: "Career & Studies",
@@ -79,8 +79,8 @@ export class TranslationService {
       about: {
         title: "⚡ Sobre Mí",
         paragraph1: "Poseo un título en <strong>Ingeniería en Robótica</strong> y un <strong>DUT en Ingeniería Eléctrica e Informática Industrial</strong>. Esta formación me ha dado una sólida comprensión tanto de la programación de bajo nivel como de alto nivel. La curiosidad me impulsa, y me apasiona <b>crear y programar</b>, ya sea para robots, máquinas o diseño de software.",
-        paragraph2: "Además de mis habilidades técnicas, también me interesa explorar el mundo. Me encanta viajar, experimentar nuevas culturas y conocer personas de diferentes orígenes. El voleibol es uno de mis deportes favoritos y disfruto mantenerme activo y comprometido.",
-        paragraph3: "Actualmente, mi enfoque es expandir mi experiencia en <strong>Inteligencia Artificial</strong> y robótica. Estoy aprendiendo y mejorando activamente en <strong>C++, Python y TypeScript.</strong> También estoy en un emocionante viaje para dominar el <b>desarrollo web full-stack</b>, construyendo habilidades tanto en tecnologías <b>front-end como back-end.</b>"
+        paragraph2: "\nAdemás de mis habilidades técnicas, también me interesa explorar el mundo. Me encanta viajar, experimentar nuevas culturas y conocer personas de diferentes orígenes. El voleibol es uno de mis deportes favoritos y disfruto mantenerme activo y comprometido.",
+        paragraph3: "\nActualmente, mi enfoque es expandir mi experiencia en <strong>Inteligencia Artificial</strong> y robótica. Estoy aprendiendo y mejorando activamente en <strong>C++, Python y TypeScript.</strong> También estoy en un emocionante viaje para dominar el <b>desarrollo web full-stack</b>, construyendo habilidades tanto en tecnologías <b>front-end como back-end.</b>"
       },
       career: {
         title: "Carrera y Estudios", 
@@ -122,8 +122,8 @@ export class TranslationService {
       about: {
         title: "⚡ À Propos de Moi",
         paragraph1: "Je détiens un diplôme en <strong>Génie Robotique</strong> et un <strong>DUT en Génie Électrique et Informatique Industrielle</strong>. Cette formation m'a donné une solide compréhension de la programmation bas niveau et haut niveau. La curiosité me motive, et je suis passionné par la <b>création et la programmation</b>, que ce soit pour des robots, des machines ou la conception de logiciels.",
-        paragraph2: "Outre mes compétences techniques, je m'investis également dans l'exploration du monde. J'aime voyager, découvrir de nouvelles cultures et rencontrer des personnes de différents horizons. Le volley-ball est l'un de mes sports préférés et j'aime rester actif et engagé.",
-        paragraph3: "Actuellement, je me concentre sur le développement de mon expertise en <strong>Intelligence Artificielle</strong> et robotique. J'apprends et m'améliore activement en <strong>C++, Python et TypeScript.</strong> Je suis également dans un voyage passionnant pour maîtriser le <b>développement web full-stack</b>, en acquérant des compétences dans les technologies <b>front-end et back-end.</b>"
+        paragraph2: "\nOutre mes compétences techniques, je m'investis également dans l'exploration du monde. J'aime voyager, découvrir de nouvelles cultures et rencontrer des personnes de différents horizons. Le volley-ball est l'un de mes sports préférés et j'aime rester actif et engagé.",
+        paragraph3: "\nActuellement, je me concentre sur le développement de mon expertise en <strong>Intelligence Artificielle</strong> et robotique. J'apprends et m'améliore activement en <strong>C++, Python et TypeScript.</strong> Je suis également dans un voyage passionnant pour maîtriser le <b>développement web full-stack</b>, en acquérant des compétences dans les technologies <b>front-end et back-end.</b>"
       },
       career: {
         title: "Carrière et Études",

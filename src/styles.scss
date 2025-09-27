@@ -122,3 +122,15 @@ a {
     gap: 0.5rem;
   }
 }
+
+
+/* estilos globales para About Me (aplican a innerHTML) */
+.about-me .about-me-text br,
+.about-me .about-me-text strong,
+.about-me .about-me-text em {
+  color: var(--highlight-color);
+}
+
+.about-me .about-me-text b {
+  color: var(--color-primary);
+}

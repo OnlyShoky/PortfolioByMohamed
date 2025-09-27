@@ -1,21 +1,20 @@
-
-
-<div class="projects-container ">
+<div class="projects-container">
   <div class="projects-left">
-    <h2>All Creative Works.</h2>
+    <h2>{{ getTranslation('projects.title') }}</h2>
     <p>
-      Here's some of my projects that I have worked on.
-      <br><a class="explore-link" routerLink="/projects"><b>Explore more →</b></a>
+      {{ getTranslation('projects.description') }}
+      <br>
+      <a class="explore-link" routerLink="/projects"><b>{{ getTranslation('projects.explore') }}</b></a>
     </p>
   </div>
 
   <div class="projects-left-right">
     <div
-    *ngFor="let project of projects; let i = index"
-    class="project-item"
-    [class.right]="i % 2 === 0"
-    [class.left]="i % 2 !== 0"
-  >
+      *ngFor="let project of projects; let i = index"
+      class="project-item"
+      [class.right]="i % 2 === 0"
+      [class.left]="i % 2 !== 0"
+    >
       <a [href]="project.link" target="_blank" class="project-link">
         <mat-card class="project-card">
           <img mat-card-image [src]="project.image" alt="{{ project.title }}" />
@@ -41,4 +40,3 @@
     </div>
   </div>
 </div>
-
