@@ -1,0 +1,42 @@
+<!-- src/app/shared/components/language-selector/language-selector.component.html -->
+<div class="language-selector">
+  <!-- DESKTOP: dropdown -->
+  <div class="desktop">
+    <button 
+      class="current-language-btn"
+      (click)="toggleDropdown()"
+    >
+      <img [src]="getCurrentFlag()" class="flag" alt="Current language">
+      <span class="code">{{ getCurrentLanguageCode() }}</span>
+      <i class="fas fa-chevron-down icon" 
+         [class.rotate]="isDropdownOpen"></i>
+    </button>
+    
+    <div 
+      class="language-dropdown"
+      [class.hidden]="!isDropdownOpen"
+    >
+      <div 
+        *ngFor="let language of languages" 
+        class="language-option"
+        (click)="changeLanguage(language.code)"
+      >
+        <img [src]="language.flag" class="flag" [alt]="language.name">
+        <span class="name">{{ language.name }}</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- MOBILE: simple buttons -->
+  <div class="mobile">
+    <div 
+      *ngFor="let language of languages" 
+      class="mobile-option"
+      (click)="changeLanguage(language.code)"
+      [class.active]="language.code === getCurrentLanguageCode()"
+    >
+      <img [src]="language.flag" class="flag" [alt]="language.name">
+      <span class="code">{{ language.code.toUpperCase() }}</span>
+    </div>
+  </div>
+</div>

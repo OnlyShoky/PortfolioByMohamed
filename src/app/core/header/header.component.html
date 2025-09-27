@@ -6,22 +6,25 @@
   <div class="flex-spacer"></div>
 
   <div *ngIf="isLargerThan768; else mobileMenu">
-    <button mat-button routerLink="/home">Home</button>
-    <button mat-button routerLink="/projects">Projects</button>
-    <button mat-button routerLink="/career">Career</button>
+    <button mat-button routerLink="/home">{{ getTranslation('nav.home') }}</button>
+    <button mat-button routerLink="/projects">{{ getTranslation('nav.projects') }}</button>
+    <button mat-button routerLink="/career">{{ getTranslation('nav.career') }}</button>
   </div>
 
   <ng-template #mobileMenu>
     <mat-icon (click)="toggleDrawer()" class="menu-icon">menu</mat-icon>
   </ng-template>
+
+          <app-language-selector class="ml-6"></app-language-selector>
+
 </mat-toolbar>
 
 <mat-drawer-container class="drawer-container">
   <mat-drawer #drawer mode="side" position="end" class="drawer">
     <div class="drawer-content">
-      <a mat-button routerLink="/">Home</a>
-      <a mat-button routerLink="/projects">Projects</a>
-      <a mat-button routerLink="/blog">Blog</a>
+      <a mat-button routerLink="/home">{{ getTranslation('nav.home') }}</a>
+      <a mat-button routerLink="/projects">{{ getTranslation('nav.projects') }}</a>
+      <a mat-button routerLink="/career">{{ getTranslation('nav.career') }}</a>
     </div>
   </mat-drawer>
 </mat-drawer-container>
