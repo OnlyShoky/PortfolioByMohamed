@@ -121,7 +121,7 @@ export class TranslationService {
       },
       about: {
         title: "⚡ À Propos de Moi",
-        paragraph1: "Je détiens un diplôme en <strong>Génie Robotique</strong> et un <strong>DUT en Génie Électrique et Informatique Industrielle</strong>. Cette formation m'a donné une solide compréhension de la programmation bas niveau et haut niveau. La curiosité me motive, et je suis passionné par la <b>création et la programmation</b>, que ce soit pour des robots, des machines ou la conception de logiciels.",
+        paragraph1: "Je détiens un diplôme en <strong>Ingénierie en Robotique</strong> et un <strong>DUT en Génie Électrique et Informatique Industrielle</strong>. Cette formation m'a donné une solide compréhension de la programmation bas niveau et haut niveau. La curiosité me motive, et je suis passionné par la <b>création et la programmation</b>, que ce soit pour des robots, des machines ou la conception de logiciels.",
         paragraph2: "\nOutre mes compétences techniques, je m'investis également dans l'exploration du monde. J'aime voyager, découvrir de nouvelles cultures et rencontrer des personnes de différents horizons. Le volley-ball est l'un de mes sports préférés et j'aime rester actif et engagé.",
         paragraph3: "\nActuellement, je me concentre sur le développement de mon expertise en <strong>Intelligence Artificielle</strong> et robotique. J'apprends et m'améliore activement en <strong>C++, Python et TypeScript.</strong> Je suis également dans un voyage passionnant pour maîtriser le <b>développement web full-stack</b>, en acquérant des compétences dans les technologies <b>front-end et back-end.</b>"
       },
