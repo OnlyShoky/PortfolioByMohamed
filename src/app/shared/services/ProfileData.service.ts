@@ -39,8 +39,26 @@ export class ProfileDataService {
       backgroundColor: 'rgba(56, 189, 248, 0.2)'
     },
 
-  ]
+    { name: 'Gemini AI', iconClass: 'fa-solid fa-brain', color: '#8A2BE2', backgroundColor: 'rgba(138, 43, 226, 0.2)' },
+    { name: 'HTTP', iconClass: 'fa-solid fa-globe', color: '#005C99', backgroundColor: 'rgba(0, 92, 153, 0.2)' },
+    { name: 'FastAPI', iconClass: 'fa-solid fa-bolt', color: '#009688', backgroundColor: 'rgba(0, 150, 136, 0.2)' },
+    { name: 'CSS', iconClass: 'fab fa-css3-alt', color: '#264DE4', backgroundColor: 'rgba(38, 77, 228, 0.2)' },
+    { name: 'ADAS', iconClass: 'fa-solid fa-car', color: '#FF6B35', backgroundColor: 'rgba(255, 107, 53, 0.2)' },
+    { name: 'ROS', iconClass: 'fa-solid fa-robot', color: '#69D4E5', backgroundColor: 'rgba(105, 212, 229, 0.2)' },
+    { name: 'C#', iconClass: 'fab fa-microsoft', color: '#9B4F96', backgroundColor: 'rgba(155, 79, 150, 0.2)' },
+    { name: 'Unity', iconClass: 'fa-solid fa-gamepad', color: '#000000', backgroundColor: 'rgba(0, 0, 0, 0.2)' }
+  ];
+
+
   private projects: Project[] = [
+
+    {
+      title: 'MyraMyrror',
+      link: 'https://www.myramyrror.com',
+      description: 'AI-powered virtual try-on solution that allows users to see how clothes fit their body type before making a purchase.',
+      image: 'assets/card-thumbnails/myramyrror.png',
+      technologies: ['Angular', 'Gemini AI', 'HTTP', 'FastAPI']
+    },
 
     {
       title: 'Neonys',
