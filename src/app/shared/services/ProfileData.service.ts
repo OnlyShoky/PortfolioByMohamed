@@ -31,6 +31,8 @@ export class ProfileDataService {
     { name: 'Linux', iconClass: 'fab fa-linux', color: '#FCC624', backgroundColor: 'rgba(252, 198, 36, 0.2)' },
     { name: 'PyAudio', iconClass: 'fas fa-microphone', color: '#1DB954', backgroundColor: 'rgba(29, 185, 84, 0.2)' },
     { name: 'N8N', iconClass: 'fa-solid fa-arrows-spin', color: '#E34F26', backgroundColor: 'rgba(243, 133, 105, 0.2)' },
+    { name: 'Chrome Extension', iconClass: 'fab fa-chrome', color: '#4285F4', backgroundColor: 'rgba(66, 133, 244, 0.2)' },
+    { name: 'Firefox Extension', iconClass: 'fab fa-firefox', color: '#FFC107', backgroundColor: 'rgba(255, 193, 7, 0.2)' },
 
     {
       name: 'TailwindCSS',
@@ -39,7 +41,7 @@ export class ProfileDataService {
       backgroundColor: 'rgba(56, 189, 248, 0.2)'
     },
 
-    { name: 'Gemini AI', iconClass: 'fa-solid fa-brain', color: '#8A2BE2', backgroundColor: 'rgba(138, 43, 226, 0.2)' },
+    { name: 'Gemini AI', iconClass: 'fab fa-google', color: '#8A2BE2', backgroundColor: 'rgba(138, 43, 226, 0.2)' },
     { name: 'HTTP', iconClass: 'fa-solid fa-globe', color: '#005C99', backgroundColor: 'rgba(0, 92, 153, 0.2)' },
     { name: 'FastAPI', iconClass: 'fa-solid fa-bolt', color: '#009688', backgroundColor: 'rgba(0, 150, 136, 0.2)' },
     { name: 'CSS', iconClass: 'fab fa-css3-alt', color: '#264DE4', backgroundColor: 'rgba(38, 77, 228, 0.2)' },
@@ -57,7 +59,7 @@ export class ProfileDataService {
       link: 'https://www.myramyrror.com',
       description: 'AI-powered virtual try-on solution that allows users to see how clothes fit their body type before making a purchase.',
       image: 'assets/card-thumbnails/myramyrror.png',
-      technologies: ['Angular', 'Gemini AI', 'HTTP', 'FastAPI']
+      technologies: ['Angular', 'Gemini AI', 'Chrome Extension', 'Firefox Extension']
     },
 
     {
