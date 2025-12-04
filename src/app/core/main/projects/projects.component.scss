@@ -10,7 +10,7 @@
   color: var(--color-primary);
 }
 
-.project-link{
+.project-link {
   max-width: 100%;
 }
 
@@ -53,7 +53,7 @@
 }
 
 .tag {
-  background-color: #e0e0e0;
+  background-color: var(--button-color);
   padding: 4px 8px;
   border-radius: 4px;
   font-size: 12px;

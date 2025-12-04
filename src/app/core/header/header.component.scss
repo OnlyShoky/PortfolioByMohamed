@@ -1,32 +1,36 @@
 @import '../../../styles.scss';
 
 .navbar {
-  background-color: #000;
-  color: #fff;
+  background-color: var(--navbar-bg);
+  color: var(--display-color);
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   margin: 1rem;
-
+  transition: background-color 0.3s ease, color 0.3s ease;
 
   .logo {
     // font-family: "Stalinist One", sans-serif;
     font-family: "Permanent Marker", cursive;
 
-        font-size: 32px;
+    font-size: 32px;
     // font-weight: bold;
-    color: #fff;
+    color: var(--display-color);
     cursor: pointer;
+    transition: color 0.3s ease;
   }
 
   .bracket {
-    color: #8f9094;
+    color: var(--logo-grey);
     font-weight: 600;
+    transition: color 0.3s ease;
   }
 
   .menu-icon {
     font-size: 24px;
     cursor: pointer;
+    color: var(--display-color);
+    transition: color 0.3s ease;
   }
 }
 
@@ -38,14 +42,16 @@
 }
 
 .drawer {
-  background-color: #333;
-  color: white;
+  background-color: var(--drawer-bg);
+  color: var(--display-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .drawer-content a {
   font-size: 16px;
-  color: white;
+  color: var(--display-color);
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 button {
@@ -61,4 +67,3 @@ mat-divider {
   height: 1px;
 
 }
-

@@ -1,4 +1,4 @@
-$card-bgcolor: #080808;
+// Removed hardcoded color - now using CSS variable
 
 
 .explore-link {
@@ -7,7 +7,7 @@ $card-bgcolor: #080808;
 
 
 .project-card {
-  background-color: $card-bgcolor;
+  background-color: var(--card-bgcolor);
   color: var(--color-primary);
 
 }
@@ -22,7 +22,7 @@ $card-bgcolor: #080808;
 }
 
 .tag {
-  background-color: #e0e0e0;
+  background-color: var(--button-color);
   padding: 4px 8px;
   border-radius: 4px;
   font-size: 12px;
@@ -50,21 +50,26 @@ $card-bgcolor: #080808;
 }
 
 .project-item {
-  width: 48%; /* Take roughly half the width */
+  width: 48%;
+  /* Take roughly half the width */
   margin-bottom: 2rem;
   margin-top: -12rem;
 
   &.left {
-    align-self: flex-start; /* Align items to the left */
+    align-self: flex-start;
+    /* Align items to the left */
   }
 
   &.right {
-    align-self: flex-end; /* Align items to the right */
+    align-self: flex-end;
+    /* Align items to the right */
   }
 
   @media screen and (max-width: 900px) {
-    width: 100%; /* Full width on small screens */
-    align-self: center; /* Center align all items */
+    width: 100%;
+    /* Full width on small screens */
+    align-self: center;
+    /* Center align all items */
     margin-top: 0;
 
   }
@@ -105,4 +110,3 @@ $card-bgcolor: #080808;
     }
   }
 }
-

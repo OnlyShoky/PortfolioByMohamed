@@ -1,20 +1,61 @@
-
 @use '@angular/material' as mat;
+
+/* ===== THEME SYSTEM - CSS CUSTOM PROPERTIES ===== */
+:root {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-theme {
+  --background: #000000;
+  --secondary: #080808;
+  --display-color: #FFFFFF;
+  --color-primary: #FFFFFF;
+  --color-secondary: #8F9094;
+  --color-tertiary: #333333;
+  --logo-grey: #8F9094;
+  --button-color: #141414;
+  --text-color: #333333;
+  --highlight-color: #6EACDA;
+  --card-bgcolor: #080808;
+  --border-color: #4c4c4e;
+  --hover-bg: #1a1a1a;
+  --drawer-bg: #333333;
+  --navbar-bg: #000000;
+}
+
+.light-theme {
+  --background: #F5F7FA;
+  --secondary: #FFFFFF;
+  --display-color: #1a202c;
+  --color-primary: #1a202c;
+  --color-secondary: #4a5568;
+  --color-tertiary: #e2e8f0;
+  --logo-grey: #718096;
+  --button-color: #EDF2F7;
+  --text-color: #2d3748;
+  --highlight-color: #5A9BD4;
+  --card-bgcolor: #FFFFFF;
+  --border-color: #e2e8f0;
+  --hover-bg: #EDF2F7;
+  --drawer-bg: #F7FAFC;
+  --navbar-bg: #FFFFFF;
+}
+
+
+/* ===== END THEME SYSTEM ===== */
 
 
 $my-primary: mat.define-palette(mat.$indigo-palette, 500);
 $my-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
 $my-warn: mat.define-palette(mat.$red-palette);
 
-$my-theme: mat.define-dark-theme((
- color: (
-   primary: $my-primary,
-   accent: $my-accent,
-   warn: $my-warn,
- ),
- typography: mat.define-typography-config(),
- density: 0,
-));
+$my-theme: mat.define-dark-theme((color: (primary: $my-primary,
+        accent: $my-accent,
+        warn: $my-warn,
+      ),
+      typography: mat.define-typography-config(),
+      density: 0,
+    ));
 
 @include mat.button-theme($my-theme);
 
@@ -47,21 +88,25 @@ h2 {
   white-space: pre-wrap;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  background-color: black; /* Set background to black */
-  color: white; /* Optional: Set text color to white for contrast */
+  background-color: var(--background);
+  color: var(--display-color);
   scroll-behavior: smooth;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 a {
   text-decoration: none;
   color: var(--color-primary);
+
   &:hover {
-    color: $display-color;
+    color: var(--display-color);
   }
+
   &:active {
     color: var(--color-secondary);
   }
@@ -71,19 +116,24 @@ a {
 /* For screens smaller than 992px (Tablets) */
 @media screen and (max-width: 992px) {
   h1 {
-    font-size: 3rem; /* Reduce font size for smaller screens */
+    font-size: 3rem;
+    /* Reduce font size for smaller screens */
   }
 
   h2 {
-    font-size: 1.25rem; /* Adjust font size for subheading */
+    font-size: 1.25rem;
+    /* Adjust font size for subheading */
   }
 
-  html, body {
-    font-size: 16px; /* Adjust base font size */
+  html,
+  body {
+    font-size: 16px;
+    /* Adjust base font size */
   }
 
   a {
-    font-size: 1.2rem; /* Increase font size slightly for readability */
+    font-size: 1.2rem;
+    /* Increase font size slightly for readability */
   }
 
   /* Additional adjustments for layout */
@@ -95,19 +145,24 @@ a {
 /* For screens smaller than 600px (Mobile) */
 @media screen and (max-width: 600px) {
   h1 {
-    font-size: 2.5rem; /* Further reduce font size for mobile screens */
+    font-size: 2.5rem;
+    /* Further reduce font size for mobile screens */
   }
 
   h2 {
-    font-size: 1.2rem; /* Adjust subheading for mobile screens */
+    font-size: 1.2rem;
+    /* Adjust subheading for mobile screens */
   }
 
-  html, body {
-    font-size: 14px; /* Smaller font size for mobile */
+  html,
+  body {
+    font-size: 14px;
+    /* Smaller font size for mobile */
   }
 
   a {
-    font-size: 1rem; /* Adjust font size for mobile devices */
+    font-size: 1rem;
+    /* Adjust font size for mobile devices */
   }
 
   /* Adjust container padding for small screens */

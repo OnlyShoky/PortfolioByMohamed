@@ -11,14 +11,15 @@ $image-height: 15rem;
 
   .image-container {
     position: relative;
+
     img.intro-image {
       position: absolute;
       top: -1rem;
       left: -2rem;
       width: $image-width;
       height: $image-height;
-      filter: invert(0.1);
     }
+
 
     .intro-text {
       position: relative;
@@ -32,7 +33,7 @@ $image-height: 15rem;
   .name {
     position: relative;
     z-index: 1;
-    color: white;
+    color: var(--display-color);
     font-size: 7rem;
     font-weight: bolder;
     line-height: 95%;
@@ -51,7 +52,8 @@ $image-height: 15rem;
       color: var(--color-primary);
       font-family: "Permanent Marker", cursive;
       //   display: inline-block;
-      border-right: 2px solid; /* Blinking cursor effect */
+      border-right: 2px solid;
+      /* Blinking cursor effect */
       white-space: nowrap;
       overflow: hidden;
       animation: blink 1.5s infinite;
@@ -61,9 +63,11 @@ $image-height: 15rem;
       0% {
         border-color: var(--color-primary);
       }
+
       50% {
         border-color: transparent;
       }
+
       100% {
         border-color: var(--color-primary);
       }
@@ -81,6 +85,7 @@ $image-height: 15rem;
 
     .btn {
       background-color: var(--button-color);
+      color: var(--color-primary);
       padding: 10px 20px;
       font-size: 1rem;
       display: flex;
@@ -100,6 +105,7 @@ $image-height: 15rem;
     opacity: 0;
     transform: translateY(20px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -110,51 +116,81 @@ $image-height: 15rem;
 /* Media query for screens smaller than 600px */
 @media screen and (max-width: 600px) {
   .intro-container {
-    padding: 0.5rem; /* Add padding for very small screens */
-    gap: 1rem; /* Further reduce gap */
-    box-sizing: border-box; /* Ensure padding doesn’t push content beyond the container */
+    padding: 0.5rem;
+    /* Add padding for very small screens */
+    gap: 1rem;
+    /* Further reduce gap */
+    box-sizing: border-box;
+    /* Ensure padding doesn’t push content beyond the container */
   }
 
   .image-container {
+
     // width: 100%; /* Ensure the image container doesn't exceed the container */
     img.intro-image {
       width: 10rem;
       height: 10rem;
-      left: 0; /* Adjust positioning for very small screens */
-      object-fit: cover; /* Prevent image distortion */
+      left: 0;
+      /* Adjust positioning for very small screens */
+      object-fit: cover;
+      /* Prevent image distortion */
     }
 
     .intro-text {
-      font-size: 1.5rem; /* Adjust font size for intro text */
-      word-wrap: break-word; /* Ensure the text wraps properly */
-      white-space: normal; /* Allow wrapping of long text */
-      overflow-wrap: break-word; /* Ensure the text breaks within the box */
+      font-size: 1.5rem;
+      /* Adjust font size for intro text */
+      word-wrap: break-word;
+      /* Ensure the text wraps properly */
+      white-space: normal;
+      /* Allow wrapping of long text */
+      overflow-wrap: break-word;
+      /* Ensure the text breaks within the box */
     }
 
     .name {
-      font-size: 5rem; /* Further reduce font size for the name */
-      word-wrap: break-word; /* Ensure name wraps if needed */
-      white-space: normal; /* Allow name to break into multiple lines if necessary */
+      font-size: 5rem;
+      /* Further reduce font size for the name */
+      word-wrap: break-word;
+      /* Ensure name wraps if needed */
+      white-space: normal;
+      /* Allow name to break into multiple lines if necessary */
     }
   }
 
 
 
   .subheading {
-    font-size: 1.8rem; /* Further reduce font size for subheading */
-    word-wrap: break-word; /* Ensure the subheading wraps properly */
-    white-space: normal; /* Allow subheading to break into multiple lines */
+    font-size: 1.8rem;
+    /* Further reduce font size for subheading */
+    word-wrap: break-word;
+    /* Ensure the subheading wraps properly */
+    white-space: normal;
+    /* Allow subheading to break into multiple lines */
   }
 
   .description {
-    font-size: 1.2rem; /* Adjust description font size */
-    word-wrap: break-word; /* Ensure description text wraps */
-    white-space: normal; /* Allow text to break if necessary */
+    font-size: 1.2rem;
+    /* Adjust description font size */
+    word-wrap: break-word;
+    /* Ensure description text wraps */
+    white-space: normal;
+    /* Allow text to break if necessary */
   }
 
   .button-group {
-    flex-direction: column; /* Stack buttons on very small screens */
+    flex-direction: column;
+    /* Stack buttons on very small screens */
     align-items: center;
-    gap: 0.5rem; /* Reduce gap between buttons */
+    gap: 0.5rem;
+    /* Reduce gap between buttons */
   }
+}
+
+// Theme-specific image filters (must be at root level)
+.dark-theme .intro-image {
+  filter: invert(1) opacity(0.4); // White/light, very subtle against dark background
+}
+
+.light-theme .intro-image {
+  filter: opacity(0.04); // Very transparent, won't interfere with dark text
 }
