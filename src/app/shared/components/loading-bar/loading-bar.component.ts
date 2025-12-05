@@ -1,21 +1,21 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
-  NavigationStart,
-  NavigationEnd,
-  NavigationCancel,
-  NavigationError,
-  Router
+    NavigationStart,
+    NavigationEnd,
+    NavigationCancel,
+    NavigationError,
+    Router
 } from '@angular/router';
 
 @Component({
-  selector: 'app-loading-bar',
-  standalone: true,
-  imports: [CommonModule],
-  template: `
+    selector: 'app-loading-bar',
+    standalone: true,
+    imports: [CommonModule],
+    template: `
     <div class="loading-bar" [class.active]="loading"></div>
   `,
-  styles: [`
+    styles: [`
     .loading-bar {
       position: fixed;
       top: 0;
@@ -35,23 +35,22 @@ import {
   `]
 })
 export class LoadingBarComponent {
-  loading = false;
-  private router = inject(Router);
+    loading = false;
+    private router = inject(Router);
 
-  constructor() {
-    this.router.events.subscribe(event => {
-      if (event instanceof NavigationStart) {
-        this.loading = true;
-      } else if (
-        event instanceof NavigationEnd ||
-        event instanceof NavigationCancel ||
-        event instanceof NavigationError
-      ) {
-        // Small delay to show completion
-        setTimeout(() => {
-          this.loading = false;
-        }, 300);
-      }
-    });
-  }
+    constructor() {
+        this.router.events.subscribe(event => {
+            if (event instanceof NavigationStart) {
+                this.loading = true;
+            } else if (
+                event instanceof NavigationEnd ||
+                event instanceof NavigationCancel ||
+                event instanceof NavigationError
+            ) {
+                setTimeout(() => {
+                    this.loading = false;
+                }, 300);
+            }
+        });
+    }
 }
