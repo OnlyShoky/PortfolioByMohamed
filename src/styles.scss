@@ -1,10 +1,12 @@
 @use '@angular/material' as mat;
 
 /* ===== THEME SYSTEM - CSS CUSTOM PROPERTIES ===== */
+/* Base theme transition */
 :root {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Dark Theme (Default) */
 .dark-theme {
   --background: #000000;
   --secondary: #080808;
@@ -13,7 +15,7 @@
   --color-secondary: #8F9094;
   --color-tertiary: #333333;
   --logo-grey: #8F9094;
-  --button-color: #141414;
+  --button-color: #242424;
   --text-color: #333333;
   --highlight-color: #6EACDA;
   --card-bgcolor: #080808;
@@ -23,6 +25,7 @@
   --navbar-bg: #000000;
 }
 
+/* Light Theme */
 .light-theme {
   --background: #F5F7FA;
   --secondary: #FFFFFF;
@@ -31,15 +34,16 @@
   --color-secondary: #4a5568;
   --color-tertiary: #e2e8f0;
   --logo-grey: #718096;
-  --button-color: #EDF2F7;
+  --button-color: #CEDEEE;
   --text-color: #2d3748;
-  --highlight-color: #5A9BD4;
+  --highlight-color: #2079C7;
   --card-bgcolor: #FFFFFF;
   --border-color: #e2e8f0;
   --hover-bg: #EDF2F7;
-  --drawer-bg: #F7FAFC;
-  --navbar-bg: #FFFFFF;
+  --drawer-bg: #F5F7FA;
+  --navbar-bg: #F5F7FA;
 }
+
 
 
 /* ===== END THEME SYSTEM ===== */
