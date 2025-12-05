@@ -18,6 +18,16 @@ $image-height: 15rem;
       left: -2rem;
       width: $image-width;
       height: $image-height;
+
+
+      /// Use ::ng-deep to pierce view encapsulation
+      ::ng-deep .dark-theme & {
+        filter: brightness(10) grayscale(1) opacity(0.2) invert(1);
+      }
+
+      ::ng-deep .light-theme & {
+        filter: brightness(0.2) grayscale(1) opacity(0.2);
+      }
     }
 
 
