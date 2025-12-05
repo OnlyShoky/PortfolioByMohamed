@@ -12,12 +12,12 @@ interface Translations {
 })
 export class TranslationService {
   private currentLanguage = signal('en');
-  
+
   private translations: Translations = {
     en: {
       nav: {
         home: "Home",
-        projects: "Projects", 
+        projects: "Projects",
         career: "Career",
         blog: "Blog"
       },
@@ -49,6 +49,40 @@ export class TranslationService {
         description: "Here's some of my projects that I have worked on.",
         explore: "Explore more →"
       },
+      projectData: {
+        myramyrror: {
+          title: "MyraMyrror",
+          description: "AI-powered virtual try-on solution that allows users to see how clothes fit their body type before making a purchase."
+        },
+        neonys: {
+          title: "Neonys",
+          description: "A futuristic, responsive landing page designed for automation and digital transformation services."
+        },
+        mealprepcodex: {
+          title: "Meal Prep Codex",
+          description: "A meal planning and recipe management application built with Django, Python, Docker, and hosted on Google Cloud."
+        },
+        pibabymonitor: {
+          title: "Pi Baby Monitor",
+          description: "A Raspberry Pi baby monitor system with live video/audio streaming using Flask and OpenCV. Features systemd service integration for automatic startup."
+        },
+        animalgo: {
+          title: "Animalgo",
+          description: "Procedural animation using constraints and physics."
+        },
+        portfolio: {
+          title: "Portfolio by Mohamed",
+          description: "My portfolio website built with Angular 17."
+        },
+        algonimation: {
+          title: "Algonimation",
+          description: "A project to visualize code using animations and charts."
+        },
+        semisupervised: {
+          title: "Semi-Supervised Object Detection",
+          description: "A project leveraging semi-supervised learning with STAC and Detectron2 for enhanced object detection on the SODA10m dataset."
+        }
+      },
       contact: {
         title: "Keep in Touch.",
         subtitle: "Feel free to connect with me.",
@@ -61,7 +95,7 @@ export class TranslationService {
       nav: {
         home: "Inicio",
         projects: "Proyectos",
-        career: "Carrera", 
+        career: "Carrera",
         blog: "Blog"
       },
       intro: {
@@ -73,7 +107,7 @@ export class TranslationService {
         about: "🤖 Soy un apasionado ingeniero en robótica y creador de software, siempre explorando nuevas tecnologías.",
         focus: "🚀 Actualmente enfocado en IA, C++, Python y desarrollo full-stack.",
         github: "Github",
-        linkedin: "Linkedin", 
+        linkedin: "Linkedin",
         downloadCV: "Descargar CV"
       },
       about: {
@@ -83,7 +117,7 @@ export class TranslationService {
         paragraph3: "\nActualmente, mi enfoque es expandir mi experiencia en <strong>Inteligencia Artificial</strong> y robótica. Estoy aprendiendo y mejorando activamente en <strong>C++, Python y TypeScript.</strong> También estoy en un emocionante viaje para dominar el <b>desarrollo web full-stack</b>, construyendo habilidades tanto en tecnologías <b>front-end como back-end.</b>"
       },
       career: {
-        title: "Carrera y Estudios", 
+        title: "Carrera y Estudios",
         experience: "Experiencia",
         education: "Educación"
       },
@@ -91,6 +125,40 @@ export class TranslationService {
         title: "Todos los Trabajos Creativos.",
         description: "Aquí hay algunos de mis proyectos en los que he trabajado.",
         explore: "Explorar más →"
+      },
+      projectData: {
+        myramyrror: {
+          title: "MyraMyrror",
+          description: "Solución de prueba virtual impulsada por IA que permite a los usuarios ver cómo les queda la ropa antes de realizar una compra."
+        },
+        neonys: {
+          title: "Neonys",
+          description: "Una página de aterrizaje futurista y responsive diseñada para servicios de automatización y transformación digital."
+        },
+        mealprepcodex: {
+          title: "Meal Prep Codex",
+          description: "Una aplicación de planificación de comidas y gestión de recetas construida con Django, Python, Docker y alojada en Google Cloud."
+        },
+        pibabymonitor: {
+          title: "Pi Baby Monitor",
+          description: "Un sistema de monitor de bebés con Raspberry Pi con transmisión de video/audio en vivo usando Flask y OpenCV. Incluye integración de servicio systemd para inicio automático."
+        },
+        animalgo: {
+          title: "Animalgo",
+          description: "Animación procedural usando restricciones y física."
+        },
+        portfolio: {
+          title: "Portfolio por Mohamed",
+          description: "Mi sitio web de portafolio construido con Angular 17."
+        },
+        algonimation: {
+          title: "Algonimation",
+          description: "Un proyecto para visualizar código usando animaciones y gráficos."
+        },
+        semisupervised: {
+          title: "Detección de Objetos Semi-Supervisada",
+          description: "Un proyecto que aprovecha el aprendizaje semi-supervisado con STAC y Detectron2 para una detección de objetos mejorada en el conjunto de datos SODA10m."
+        }
       },
       contact: {
         title: "Mantengámonos en Contacto.",
@@ -108,7 +176,7 @@ export class TranslationService {
         blog: "Blog"
       },
       intro: {
-        greeting: "Salut !, Je suis-", 
+        greeting: "Salut !, Je suis-",
         name1: "Mohamed",
         name2: "El Mourabit.",
         dynamicRoles: ["Ingénieur Logiciel .", "Ingénieur IA .", "Ingénieur en Robotique ."],
@@ -134,6 +202,40 @@ export class TranslationService {
         title: "Tous les Travaux Créatifs.",
         description: "Voici quelques-uns de mes projets sur lesquels j'ai travaillé.",
         explore: "Explorer plus →"
+      },
+      projectData: {
+        myramyrror: {
+          title: "MyraMyrror",
+          description: "Solution d'essayage virtuel alimentée par l'IA qui permet aux utilisateurs de voir comment les vêtements s'adaptent à leur morphologie avant d'effectuer un achat."
+        },
+        neonys: {
+          title: "Neonys",
+          description: "Une page d'atterrissage futuriste et responsive conçue pour les services d'automatisation et de transformation numérique."
+        },
+        mealprepcodex: {
+          title: "Meal Prep Codex",
+          description: "Une application de planification de repas et de gestion de recettes construite avec Django, Python, Docker et hébergée sur Google Cloud."
+        },
+        pibabymonitor: {
+          title: "Pi Baby Monitor",
+          description: "Un système de surveillance pour bébé Raspberry Pi avec streaming vidéo/audio en direct utilisant Flask et OpenCV. Intégration de service systemd pour démarrage automatique."
+        },
+        animalgo: {
+          title: "Animalgo",
+          description: "Animation procédurale utilisant des contraintes et la physique."
+        },
+        portfolio: {
+          title: "Portfolio par Mohamed",
+          description: "Mon site web portfolio construit avec Angular 17."
+        },
+        algonimation: {
+          title: "Algonimation",
+          description: "Un projet pour visualiser le code en utilisant des animations et des graphiques."
+        },
+        semisupervised: {
+          title: "Détection d'Objets Semi-Supervisée",
+          description: "Un projet exploitant l'apprentissage semi-supervisé avec STAC et Detectron2 pour une détection d'objets améliorée sur le jeu de données SODA10m."
+        }
       },
       contact: {
         title: "Restons en Contact.",

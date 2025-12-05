@@ -55,62 +55,54 @@ export class ProfileDataService {
   private projects: Project[] = [
 
     {
-      title: 'MyraMyrror',
+      translationKey: 'myramyrror',
       link: 'https://www.myramyrror.com',
-      description: 'AI-powered virtual try-on solution that allows users to see how clothes fit their body type before making a purchase.',
       image: 'assets/card-thumbnails/myramyrror.png',
       technologies: ['Angular', 'Gemini AI', 'Chrome Extension', 'Firefox Extension']
     },
 
     {
-      title: 'Neonys',
+      translationKey: 'neonys',
       link: 'https://neonys.fr',
-      description: 'A futuristic, responsive landing page designed for automation and digital transformation services.',
       image: 'assets/card-thumbnails/neonys.png',
       technologies: ['HTML', 'CSS', 'JavaScript', 'TailwindCSS', 'N8N']
     },
 
     {
-      title: 'Meal Prep Codex',
-      link: 'https://github.com/OnlyShoky/recipe_project', // Replace with your actual link
-      description: 'A meal planning and recipe management application built with Django, Python, Docker, and hosted on Google Cloud.',
-      image: 'assets/card-thumbnails/mealprep.png', // Add an image for this project
+      translationKey: 'mealprepcodex',
+      link: 'https://github.com/OnlyShoky/recipe_project',
+      image: 'assets/card-thumbnails/mealprep.png',
       technologies: ['Django', 'Docker', 'Google Cloud', 'SQL']
     },
 
     {
-      title: 'Pi Baby Monitor',
+      translationKey: 'pibabymonitor',
       link: 'https://github.com/OnlyShoky/pibabymonitor',
-      description: 'A Raspberry Pi baby monitor system with live video/audio streaming using Flask and OpenCV. Features systemd service integration for automatic startup.',
       image: 'assets/card-thumbnails/pibabymonitor.png',
       technologies: ['Python', 'OpenCV', 'Flask', 'FFmpeg']
     },
 
     {
-      title: 'Animalgo',
+      translationKey: 'animalgo',
       link: 'https://animalgo.netlify.app',
-      description: 'Procedural animation using constraints and physics.',
       image: 'assets/card-thumbnails/animalgo.png',
       technologies: ['Angular', 'HTML', 'SCSS', 'TypeScript']
     },
     {
-      title: 'Portfolio by Mohamed',
+      translationKey: 'portfolio',
       link: 'https://mohamed-elmourabit.netlify.app',
-      description: 'My portfolio website built with Angular 17.',
       image: 'assets/card-thumbnails/portfolio1.png',
       technologies: ['Angular', 'HTML', 'SCSS', 'TypeScript']
     },
     {
-      title: 'Algonimation',
+      translationKey: 'algonimation',
       link: 'https://algonimation.netlify.app',
-      description: 'A project to visualize code using animations and charts.',
       image: 'assets/card-thumbnails/algonimation.png',
       technologies: ['Angular', 'Chart.js', 'Prism.js']
     },
     {
-      title: 'Semi-Supervised Object Detection',
+      translationKey: 'semisupervised',
       link: 'https://github.com/OnlyShoky/Detectron2-STAC-SODA10m',
-      description: 'A project leveraging semi-supervised learning with STAC and Detectron2 for enhanced object detection on the SODA10m dataset.',
       image: 'assets/card-thumbnails/smartvision.gif',
       technologies: ['Python', 'Detectron2', 'PyTorch']
     },

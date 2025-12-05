@@ -14,7 +14,7 @@ import { TranslationService } from '../../../shared/services/translation';
 })
 export class ProjectsComponent {
 
-  projects : Project[];
+  projects: Project[];
 
   constructor(private profileDataService: ProfileDataService) {
     this.projects = this.profileDataService.getProjects();
@@ -26,12 +26,26 @@ export class ProjectsComponent {
     return this.profileDataService.getTechDetails(techName);
   }
 
-    private translationService = inject(TranslationService);
-  
-    getTranslation(key: string): string {
-      return this.translationService.getTranslation(key);
-    }
-  
+  private translationService = inject(TranslationService);
 
+  getTranslation(key: string): string {
+    return this.translationService.getTranslation(key);
+  }
+
+  // Get translated project title
+  getProjectTitle(project: Project): string {
+    if (project.translationKey) {
+      return this.translationService.getTranslation(`projectData.${project.translationKey}.title`);
+    }
+    return project.title || '';
+  }
+
+  // Get translated project description
+  getProjectDescription(project: Project): string {
+    if (project.translationKey) {
+      return this.translationService.getTranslation(`projectData.${project.translationKey}.description`);
+    }
+    return project.description || '';
+  }
 
 }
