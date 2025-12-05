@@ -7,9 +7,9 @@ import { Project, Experience, Education } from '../models/interfaces';
 export class ProfileDataService {
 
   technologies = [
-    { name: 'Python', iconClass: 'fab fa-python', color: '#9EDF9C', backgroundColor: 'rgba(194, 255, 199, 0.2)' },
+    { name: 'Python', iconClass: 'fab fa-python', color: '#9EDF9C', lightModeColor: '#3D8B40', backgroundColor: 'rgba(194, 255, 199, 0.2)' },
     { name: 'Angular', iconClass: 'fab fa-angular', color: '#FF2929', backgroundColor: 'rgba(255, 207, 179, 0.2)' },
-    { name: 'JavaScript', iconClass: 'fab fa-js-square', color: '#FEEC37', backgroundColor: 'rgba(252, 245, 150, 0.2)' },
+    { name: 'JavaScript', iconClass: 'fab fa-js-square', color: '#FEEC37', lightModeColor: '#D4B106', backgroundColor: 'rgba(252, 245, 150, 0.2)' },
     { name: 'C++', iconClass: 'fab fa-cuttlefish', color: '#4A90E2', backgroundColor: 'rgba(180, 210, 255, 0.2)' },
     { name: 'HTML', iconClass: 'fab fa-html5', color: '#E34F26', backgroundColor: 'rgba(243, 133, 105, 0.2)' },
     { name: 'SCSS', iconClass: 'fab fa-sass', color: '#CC6699', backgroundColor: 'rgba(247, 185, 222, 0.2)' },
@@ -17,38 +17,31 @@ export class ProfileDataService {
     { name: 'Prism.js', iconClass: 'fas fa-lightbulb', color: '#9B59B6', backgroundColor: 'rgba(201, 155, 225, 0.2)' },
     { name: 'TypeScript', iconClass: 'fab fa-js-square', color: '#4A90E2', backgroundColor: 'rgba(180, 210, 255, 0.2)' },
     { name: 'PyTorch', iconClass: 'fa-solid fa-fire-flame-curved', color: '#EE4C2C', backgroundColor: 'rgba(238, 76, 44, 0.2)' },
-    { name: 'Detectron2', iconClass: 'fa-solid fa-robot', color: '#FFC107', backgroundColor: 'rgba(255, 193, 7, 0.2)' },
+    { name: 'Detectron2', iconClass: 'fa-solid fa-robot', color: '#FFC107', lightModeColor: '#C79100', backgroundColor: 'rgba(255, 193, 7, 0.2)' },
     { name: 'Jupyter', iconClass: 'fa-solid fa-planet-ringed', color: '#F37626', backgroundColor: 'rgba(243, 118, 38, 0.2)' },
-    { name: 'SQL', iconClass: 'fas fa-database', color: '#00BFFF', backgroundColor: 'rgba(0, 191, 255, 0.2)' },
-    { name: 'Django', iconClass: 'fab fa-python', color: '#9EDF9C', backgroundColor: 'rgba(0, 211, 131, 0.2)' }, // Added Django
+    { name: 'SQL', iconClass: 'fas fa-database', color: '#00BFFF', lightModeColor: '#0080CC', backgroundColor: 'rgba(0, 191, 255, 0.2)' },
+    { name: 'Django', iconClass: 'fab fa-python', color: '#00D383', lightModeColor: '#0A4A2A', backgroundColor: 'rgba(0, 211, 131, 0.2)' },
     { name: 'Docker', iconClass: 'fab fa-docker', color: '#2496ED', backgroundColor: 'rgba(36, 150, 237, 0.2)' }, // Added Docker
     { name: 'Google Cloud', iconClass: 'fab fa-google', color: '#4285F4', backgroundColor: 'rgba(66, 133, 244, 0.2)' }, // Added Google Cloud
-    { name: 'Flask', iconClass: 'fas fa-flask', color: 'white', backgroundColor: 'rgba(130, 130, 130, 0.2)' },
+    { name: 'Flask', iconClass: 'fas fa-flask', color: '#CCCCCC', lightModeColor: '#3A3A3A', backgroundColor: 'rgba(204, 204, 204, 0.2)' },
     { name: 'OpenCV', iconClass: 'fas fa-eye', color: '#5C3EE8', backgroundColor: 'rgba(92, 62, 232, 0.2)' },
     { name: 'FFmpeg', iconClass: 'fas fa-video', color: '#007808', backgroundColor: 'rgba(0, 120, 8, 0.2)' },
     { name: 'Raspberry Pi', iconClass: 'fas fa-raspberry-pi', color: '#C51A4A', backgroundColor: 'rgba(197, 26, 74, 0.2)' },
     { name: 'Systemd', iconClass: 'fas fa-cogs', color: '#0E4EF0', backgroundColor: 'rgba(14, 78, 240, 0.2)' },
-    { name: 'Linux', iconClass: 'fab fa-linux', color: '#FCC624', backgroundColor: 'rgba(252, 198, 36, 0.2)' },
+    { name: 'Linux', iconClass: 'fab fa-linux', color: '#FCC624', lightModeColor: '#C79100', backgroundColor: 'rgba(252, 198, 36, 0.2)' },
     { name: 'PyAudio', iconClass: 'fas fa-microphone', color: '#1DB954', backgroundColor: 'rgba(29, 185, 84, 0.2)' },
     { name: 'N8N', iconClass: 'fa-solid fa-arrows-spin', color: '#E34F26', backgroundColor: 'rgba(243, 133, 105, 0.2)' },
     { name: 'Chrome Extension', iconClass: 'fab fa-chrome', color: '#4285F4', backgroundColor: 'rgba(66, 133, 244, 0.2)' },
-    { name: 'Firefox Extension', iconClass: 'fab fa-firefox', color: '#FFC107', backgroundColor: 'rgba(255, 193, 7, 0.2)' },
-
-    {
-      name: 'TailwindCSS',
-      iconClass: 'fas fa-wind',
-      color: '#38BDF8',
-      backgroundColor: 'rgba(56, 189, 248, 0.2)'
-    },
-
+    { name: 'Firefox Extension', iconClass: 'fab fa-firefox', color: '#FFC107', lightModeColor: '#D87000', backgroundColor: 'rgba(255, 193, 7, 0.2)' },
+    { name: 'TailwindCSS', iconClass: 'fas fa-wind', color: '#38BDF8', backgroundColor: 'rgba(56, 189, 248, 0.2)' },
     { name: 'Gemini AI', iconClass: 'fab fa-google', color: '#8A2BE2', backgroundColor: 'rgba(138, 43, 226, 0.2)' },
     { name: 'HTTP', iconClass: 'fa-solid fa-globe', color: '#005C99', backgroundColor: 'rgba(0, 92, 153, 0.2)' },
     { name: 'FastAPI', iconClass: 'fa-solid fa-bolt', color: '#009688', backgroundColor: 'rgba(0, 150, 136, 0.2)' },
-    { name: 'CSS', iconClass: 'fab fa-css3-alt', color: '#264DE4', backgroundColor: 'rgba(38, 77, 228, 0.2)' },
+    { name: 'CSS', iconClass: 'fab fa-css3-alt', color: '#8FA3F2', backgroundColor: 'rgba(32, 47, 106, 0.97)' },
     { name: 'ADAS', iconClass: 'fa-solid fa-car', color: '#FF6B35', backgroundColor: 'rgba(255, 107, 53, 0.2)' },
-    { name: 'ROS', iconClass: 'fa-solid fa-robot', color: '#69D4E5', backgroundColor: 'rgba(105, 212, 229, 0.2)' },
+    { name: 'ROS', iconClass: 'fa-solid fa-robot', color: '#69D4E5', lightModeColor: '#1E88A8', backgroundColor: 'rgba(105, 212, 229, 0.2)' },
     { name: 'C#', iconClass: 'fab fa-microsoft', color: '#9B4F96', backgroundColor: 'rgba(155, 79, 150, 0.2)' },
-    { name: 'Unity', iconClass: 'fa-solid fa-gamepad', color: '#000000', backgroundColor: 'rgba(0, 0, 0, 0.2)' }
+    { name: 'Unity', iconClass: 'fa-solid fa-gamepad', color: '#999999', lightModeColor: '#222222', backgroundColor: 'rgba(153, 153, 153, 0.2)' }
   ];
 
 
@@ -264,10 +257,16 @@ export class ProfileDataService {
   }
 
   // Helper function to get technology details by name
-  getTechDetails(techName: string) {
-    return this.technologies.find(tech => tech.name === techName);
+  getTechDetails(techName: string, isDarkMode: boolean = true) {
+    const tech = this.technologies.find(tech => tech.name === techName);
+    if (!tech) return undefined;
+
+    // Return appropriate color based on theme
+    return {
+      ...tech,
+      color: isDarkMode ? tech.color : (tech.lightModeColor || tech.color)
+    };
   }
 
   constructor() { }
 }
-

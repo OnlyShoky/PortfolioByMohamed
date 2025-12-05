@@ -6,6 +6,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { NavigationEnd, Router, RouterLink } from '@angular/router';
 import { ProfileDataService } from '../../../../shared/services/ProfileData.service';
 import { TranslationService } from '../../../../shared/services/translation';
+import { ThemeService } from '../../../../shared/services/theme.service';
 
 export interface Tile {
   cols: number;
@@ -23,15 +24,17 @@ export interface Tile {
 export class CreativeWorkComponent implements OnInit {
   projects: Project[] = [];
   private translationService = inject(TranslationService);
+  private themeService = inject(ThemeService);
 
-  constructor(private profileDataService: ProfileDataService) {}
+  constructor(private profileDataService: ProfileDataService) { }
 
   ngOnInit() {
     this.projects = this.profileDataService.getProjects(4);
   }
 
   getTechDetails(techName: string) {
-    return this.profileDataService.getTechDetails(techName);
+    const isDarkMode = this.themeService.isDark();
+    return this.profileDataService.getTechDetails(techName, isDarkMode);
   }
 
   getTranslation(key: string): string {

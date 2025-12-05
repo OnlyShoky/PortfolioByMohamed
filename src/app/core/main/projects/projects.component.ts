@@ -5,6 +5,8 @@ import { ProfileDataService } from '../../../shared/services/ProfileData.service
 import { Project } from '../../../shared/models/interfaces';
 import { TranslationService } from '../../../shared/services/translation';
 
+import { ThemeService } from '../../../shared/services/theme.service';
+
 @Component({
   selector: 'app-projects',
   standalone: true,
@@ -15,15 +17,17 @@ import { TranslationService } from '../../../shared/services/translation';
 export class ProjectsComponent {
 
   projects: Project[];
+  private themeService = inject(ThemeService);
 
   constructor(private profileDataService: ProfileDataService) {
     this.projects = this.profileDataService.getProjects();
   }
 
 
-  // Helper function to get technology details by name
+  // Helper function to get technology details by name (theme-aware)
   getTechDetails(techName: string) {
-    return this.profileDataService.getTechDetails(techName);
+    const isDarkMode = this.themeService.isDark();
+    return this.profileDataService.getTechDetails(techName, isDarkMode);
   }
 
   private translationService = inject(TranslationService);
