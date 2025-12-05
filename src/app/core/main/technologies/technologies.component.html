@@ -1,0 +1,35 @@
+<div class="technologies-page">
+    <div class="page-header">
+        <h1>{{ getTranslation('technologies.title') || 'Technology Stack' }}</h1>
+        <p class="subtitle">{{ getTranslation('technologies.subtitle') || 'All tools and technologies I work with' }}
+        </p>
+
+        <div class="search-bar">
+            <i class="fas fa-search"></i>
+            <input type="text" [(ngModel)]="searchQuery"
+                [placeholder]="getTranslation('technologies.search') || 'Search technologies...'" />
+        </div>
+    </div>
+
+    <div class="filter-buttons">
+        <button *ngFor="let cat of categories" [class.active]="selectedCategory === cat.key"
+            (click)="selectCategory(cat.key)" class="filter-btn">
+            <i [class]="cat.icon"></i>
+            <span>{{ cat.name }}</span>
+        </button>
+    </div>
+
+    <div class="technologies-grid">
+        <div class="tech-card" *ngFor="let tech of filteredTechnologies">
+            <div class="tech-icon-wrapper" [style.color]="getTechColor(tech)">
+                <i [class]="tech.iconClass"></i>
+            </div>
+            <h3 class="tech-name">{{ tech.name }}</h3>
+            <span class="tech-category">{{ tech.category }}</span>
+        </div>
+    </div>
+
+    <div class="tech-count">
+        <p>{{ filteredTechnologies.length }} {{ filteredTechnologies.length === 1 ? 'technology' : 'technologies' }}</p>
+    </div>
+</div>

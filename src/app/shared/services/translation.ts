@@ -19,6 +19,7 @@ export class TranslationService {
         home: "Home",
         projects: "Projects",
         career: "Career",
+        technologies: "Technologies",
         blog: "Blog"
       },
       intro: {
@@ -89,6 +90,12 @@ export class TranslationService {
         sendEmail: "Send Email",
         linkedin: "Linkedin",
         downloadCV: "Download CV"
+      },
+      technologies: {
+        title: "Technology Stack",
+        subtitle: "All tools and technologies I work with",
+        search: "Search technologies...",
+        viewAll: "View All Technologies"
       }
     },
     es: {
@@ -96,6 +103,7 @@ export class TranslationService {
         home: "Inicio",
         projects: "Proyectos",
         career: "Carrera",
+        technologies: "Tecnologías",
         blog: "Blog"
       },
       intro: {
@@ -166,6 +174,12 @@ export class TranslationService {
         sendEmail: "Enviar Email",
         linkedin: "Linkedin",
         downloadCV: "Descargar CV"
+      },
+      technologies: {
+        title: "Pila Tecnológica",
+        subtitle: "Todas las herramientas y tecnologías con las que trabajo",
+        search: "Buscar tecnologías...",
+        viewAll: "Ver Todas las Tecnologías"
       }
     },
     fr: {
@@ -173,6 +187,7 @@ export class TranslationService {
         home: "Accueil",
         projects: "Projets",
         career: "Carrière",
+        technologies: "Technologies",
         blog: "Blog"
       },
       intro: {
@@ -243,6 +258,12 @@ export class TranslationService {
         sendEmail: "Envoyer Email",
         linkedin: "Linkedin",
         downloadCV: "Télécharger CV"
+      },
+      technologies: {
+        title: "Pile Technologique",
+        subtitle: "Tous les outils et technologies avec lesquels je travaille",
+        search: "Rechercher des technologies...",
+        viewAll: "Voir Toutes les Technologies"
       }
     }
   };

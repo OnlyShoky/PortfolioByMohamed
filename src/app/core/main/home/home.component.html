@@ -5,26 +5,17 @@
     <app-scroll-button></app-scroll-button>
   </div>
 
-  <div
-    appAppearOnScroll
-    class="hidden"
-    [ngClass]="{ 'fade-in-bottom': aboutMeVisible }"
-    (elementVisible)="onElementVisible($event, 'aboutMeVisible')"
-  >
+  <div appAppearOnScroll class="hidden" [ngClass]="{ 'fade-in-bottom': aboutMeVisible }"
+    (elementVisible)="onElementVisible($event, 'aboutMeVisible')">
     <app-about-me></app-about-me>
   </div>
 
-  <app-creative-work
-    appAppearOnScroll
-    class="hidden"
-    [ngClass]="{ 'fade-in-bottom': creativeWorkVisible }"
-    (elementVisible)="onElementVisible($event, 'creativeWorkVisible')"
-  ></app-creative-work>
+  <app-creative-work appAppearOnScroll class="hidden" [ngClass]="{ 'fade-in-bottom': creativeWorkVisible }"
+    (elementVisible)="onElementVisible($event, 'creativeWorkVisible')"></app-creative-work>
 
-  <app-keep-in-touch
-    appAppearOnScroll
-    class="hidden"
-    [ngClass]="{ 'fade-in-bottom': keepInTouchVisible }"
-    (elementVisible)="onElementVisible($event, 'keepInTouchVisible')"
-  ></app-keep-in-touch>
+  <app-technology-stack appAppearOnScroll class="hidden" [ngClass]="{ 'fade-in-bottom': techStackVisible }"
+    (elementVisible)="onElementVisible($event, 'techStackVisible')"></app-technology-stack>
+
+  <app-keep-in-touch appAppearOnScroll class="hidden" [ngClass]="{ 'fade-in-bottom': keepInTouchVisible }"
+    (elementVisible)="onElementVisible($event, 'keepInTouchVisible')"></app-keep-in-touch>
 </div>

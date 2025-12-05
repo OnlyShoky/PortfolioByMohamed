@@ -1,0 +1,30 @@
+<div class="tech-stack-section">
+    <div class="section-header">
+        <h2>Technology Stack</h2>
+        <p class="subtitle">Tools and technologies I work with</p>
+    </div>
+
+    <div class="categories-grid">
+        <div class="category-card" *ngFor="let category of categories">
+            <div class="category-header">
+                <i [class]="category.icon"></i>
+                <h3>{{ category.name }}</h3>
+                <p class="category-description">{{ category.description }}</p>
+            </div>
+
+            <div class="tech-icons">
+                <div class="tech-icon" *ngFor="let tech of getCategoryTechs(category.key)" [title]="tech.name">
+                    <i [class]="tech.iconClass" [style.color]="getTechColor(tech)"></i>
+                    <span class="tech-name">{{ tech.name }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="view-all-container">
+        <a routerLink="/technologies" class="view-all-btn">
+            <span>View All Technologies</span>
+            <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</div>
