@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { Experience } from '../../../../shared/models/interfaces';
-import { ProfileDataService } from '../../../../shared/services/ProfileData.service';
+import { ProfileDataService } from '../../../../shared/services/profile-data.service';
 import { CommonModule } from '@angular/common';
 import { ThemeService } from '../../../../shared/services/theme.service';
 

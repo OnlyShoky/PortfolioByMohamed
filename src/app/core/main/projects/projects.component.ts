@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
-import { ProfileDataService } from '../../../shared/services/ProfileData.service';
+import { ProfileDataService } from '../../../shared/services/profile-data.service';
 import { Project } from '../../../shared/models/interfaces';
 import { TranslationService } from '../../../shared/services/translation';
 

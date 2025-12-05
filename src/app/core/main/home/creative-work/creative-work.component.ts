@@ -4,7 +4,7 @@ import { MatCardModule } from '@angular/material/card';
 import { Project } from '../../../../shared/models/interfaces';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { NavigationEnd, Router, RouterLink } from '@angular/router';
-import { ProfileDataService } from '../../../../shared/services/ProfileData.service';
+import { ProfileDataService } from '../../../../shared/services/profile-data.service';
 import { TranslationService } from '../../../../shared/services/translation';
 import { ThemeService } from '../../../../shared/services/theme.service';
 
