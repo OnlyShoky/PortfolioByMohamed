@@ -9,26 +9,18 @@
   </div>
 
   <div class="projects-left-right">
-    <div
-      *ngFor="let project of projects; let i = index"
-      class="project-item"
-      [class.right]="i % 2 === 0"
-      [class.left]="i % 2 !== 0"
-    >
+    <div *ngFor="let project of projects; let i = index" class="project-item" [class.right]="i % 2 === 0"
+      [class.left]="i % 2 !== 0">
       <a [href]="project.link" target="_blank" class="project-link">
         <mat-card class="project-card">
-          <img mat-card-image [src]="project.image" alt="{{ project.title }}" />
+          <img mat-card-image [src]="project.image" [alt]="project.title" appSkeletonLoader />
           <mat-card-content>
             <h2>{{ project.title }}</h2>
             <div class="tags">
-              <span
-                *ngFor="let techName of project.technologies"
-                class="tag"
-                [ngStyle]="{
+              <span *ngFor="let techName of project.technologies" class="tag" [ngStyle]="{
                   color: getTechDetails(techName)?.color,
                   'background-color': getTechDetails(techName)?.backgroundColor
-                }"
-              >
+                }">
                 <i [class]="getTechDetails(techName)?.iconClass"></i>
                 {{ techName }}
               </span>

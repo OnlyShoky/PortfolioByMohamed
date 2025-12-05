@@ -193,3 +193,86 @@ a {
 .about-me .about-me-text b {
   color: var(--color-primary);
 }
+
+/* ===== UI ENHANCEMENTS ===== */
+
+/* Smooth Scroll with Accessibility */
+html {
+  scroll-padding-top: 80px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    animation-duration: 0.01s !important;
+    transition-duration: 0.01s !important;
+  }
+}
+
+/* Focus Indicators */
+*:focus-visible {
+  outline: 2px solid var(--highlight-color);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline-offset: 4px;
+}
+
+/* Enhanced Buttons */
+button,
+.btn,
+.cta-btn {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* Skeleton Loading */
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.skeleton-loading {
+  overflow: hidden;
+  background: linear-gradient(90deg, var(--color-tertiary) 25%, var(--color-secondary) 50%, var(--color-tertiary) 75%);
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.5s infinite;
+
+  img {
+    opacity: 0;
+  }
+}
+
+.skeleton-loaded img {
+  animation: fade-in 0.3s ease-in;
+  opacity: 1;
+}

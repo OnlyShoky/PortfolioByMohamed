@@ -59,3 +59,39 @@
   font-size: 12px;
   color: var(--color-tertiary);
 }
+
+/* Enhanced Card Hover Animations */
+.project-link {
+  display: block;
+  text-decoration: none;
+
+  .project-card {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+      box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+      border-color 0.3s ease;
+    will-change: transform;
+
+    &:hover {
+      transform: translateY(-8px) scale(1.02);
+      border-color: var(--highlight-color);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+
+      .dark-theme & {
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+      }
+
+      img {
+        transform: scale(1.02);
+      }
+    }
+
+    &:active {
+      transform: translateY(-4px) scale(1.01);
+      transition-duration: 0.1s;
+    }
+
+    img {
+      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
+}

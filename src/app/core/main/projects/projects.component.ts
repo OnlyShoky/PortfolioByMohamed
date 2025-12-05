@@ -4,13 +4,14 @@ import { MatCardModule } from '@angular/material/card';
 import { ProfileDataService } from '../../../shared/services/profile-data.service';
 import { Project } from '../../../shared/models/interfaces';
 import { TranslationService } from '../../../shared/services/translation';
+import { SkeletonLoaderDirective } from '../../../shared/directives/skeleton-loader.directive';
 
 import { ThemeService } from '../../../shared/services/theme.service';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [MatCardModule, CommonModule],
+  imports: [MatCardModule, CommonModule, SkeletonLoaderDirective],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })

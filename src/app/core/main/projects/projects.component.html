@@ -9,7 +9,7 @@
   <div class="projects-flex">
     <a *ngFor="let project of projects" [href]="project.link" target="_blank" class="project-link">
       <mat-card class="project-card">
-        <img mat-card-image [src]="project.image" alt="{{ getProjectTitle(project) }}" />
+        <img mat-card-image [src]="project.image" [alt]="getProjectTitle(project)" appSkeletonLoader />
         <mat-card-content>
           <h2>{{ getProjectTitle(project) }}</h2>
           <p>{{ getProjectDescription(project) }}</p>

@@ -110,3 +110,24 @@
     }
   }
 }
+/* Enhanced Card Hover Animations */
+.project-card {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+  
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    
+    .dark-theme & {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    }
+  }
+  
+  &:active {
+    transform: translateY(-3px);
+    transition-duration: 0.1s;
+  }
+}
+

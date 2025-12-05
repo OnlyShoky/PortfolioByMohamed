@@ -7,6 +7,7 @@ import { NavigationEnd, Router, RouterLink } from '@angular/router';
 import { ProfileDataService } from '../../../../shared/services/profile-data.service';
 import { TranslationService } from '../../../../shared/services/translation';
 import { ThemeService } from '../../../../shared/services/theme.service';
+import { SkeletonLoaderDirective } from '../../../../shared/directives/skeleton-loader.directive';
 
 export interface Tile {
   cols: number;
@@ -17,7 +18,7 @@ export interface Tile {
 @Component({
   selector: 'app-creative-work',
   standalone: true,
-  imports: [CommonModule, MatCardModule, MatGridListModule, RouterLink],
+  imports: [CommonModule, MatCardModule, MatGridListModule, RouterLink, SkeletonLoaderDirective],
   templateUrl: './creative-work.component.html',
   styleUrls: ['./creative-work.component.scss']
 })
