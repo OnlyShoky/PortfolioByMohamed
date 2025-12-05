@@ -48,7 +48,7 @@ export class TranslationService {
       projects: {
         title: "All Creative Works.",
         description: "Here's some of my projects that I have worked on.",
-        explore: "Explore more →"
+        explore: "Explore more"
       },
       projectData: {
         myramyrror: {
@@ -132,7 +132,7 @@ export class TranslationService {
       projects: {
         title: "Todos los Trabajos Creativos.",
         description: "Aquí hay algunos de mis proyectos en los que he trabajado.",
-        explore: "Explorar más →"
+        explore: "Explorar más"
       },
       projectData: {
         myramyrror: {
@@ -216,7 +216,7 @@ export class TranslationService {
       projects: {
         title: "Tous les Travaux Créatifs.",
         description: "Voici quelques-uns de mes projets sur lesquels j'ai travaillé.",
-        explore: "Explorer plus →"
+        explore: "Explorer plus"
       },
       projectData: {
         myramyrror: {

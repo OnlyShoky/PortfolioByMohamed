@@ -4,7 +4,7 @@
     <p>
       {{ getTranslation('projects.description') }}
       <br>
-      <a class="explore-link" routerLink="/projects"><b>{{ getTranslation('projects.explore') }}</b></a>
+      <!-- <a class="explore-link" routerLink="/projects"><b>{{ getTranslation('projects.explore') }}</b></a> -->
     </p>
   </div>
 
@@ -30,5 +30,12 @@
         </mat-card>
       </a>
     </div>
+  </div>
+
+  <div class="view-all-container">
+    <a routerLink="/projects" class="view-all-btn">
+      <span>{{ getTranslation('projects.explore') }}</span>
+      <i class="fas fa-arrow-right"></i>
+    </a>
   </div>
 </div>

@@ -110,24 +110,58 @@
     }
   }
 }
+
 /* Enhanced Card Hover Animations */
 .project-card {
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform;
-  
+
   &:hover {
     transform: translateY(-6px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    
+
     .dark-theme & {
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
     }
   }
-  
+
   &:active {
     transform: translateY(-3px);
     transition-duration: 0.1s;
   }
 }
 
+
+.view-all-container {
+  text-align: center;
+  margin-top: 2rem;
+
+  .view-all-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    background: var(--highlight-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+    &:hover {
+      transform: translateY(-2px) scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+
+      i {
+        transform: translateX(4px);
+      }
+    }
+
+    i {
+      transition: transform 0.3s ease;
+    }
+  }
+}
