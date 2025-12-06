@@ -75,6 +75,10 @@ export class TranslationService {
           title: "Portfolio by Mohamed",
           description: "My portfolio website built with Angular 17."
         },
+        biopotions: {
+          title: "BioPotions",
+          description: "A full-stack MERN platform teaching natural home remedies with scientific verification. Features multi-language support, source citations from Quran, Science, and historical texts."
+        },
         algonimation: {
           title: "Algonimation",
           description: "A project to visualize code using animations and charts."
@@ -159,6 +163,10 @@ export class TranslationService {
           title: "Portfolio por Mohamed",
           description: "Mi sitio web de portafolio construido con Angular 17."
         },
+        biopotions: {
+          title: "BioPotions",
+          description: "Una plataforma MERN full-stack que enseña remedios caseros naturales con verificación científica. Incluye soporte multilingüe y citas de fuentes del Corán, ciencia y textos históricos."
+        },
         algonimation: {
           title: "Algonimation",
           description: "Un proyecto para visualizar código usando animaciones y gráficos."
@@ -242,6 +250,10 @@ export class TranslationService {
         portfolio: {
           title: "Portfolio par Mohamed",
           description: "Mon site web portfolio construit avec Angular 17."
+        },
+        biopotions: {
+          title: "BioPotions",
+          description: "Une plateforme MERN full-stack enseignant les remèdes naturels avec vérification scientifique. Inclut le support multilingue et citations de sources du Coran, science et textes historiques."
         },
         algonimation: {
           title: "Algonimation",

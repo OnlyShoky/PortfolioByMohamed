@@ -11,6 +11,7 @@ export class ProfileDataService {
     { name: 'Python', category: 'backend', iconClass: 'fab fa-python', color: '#9EDF9C', lightModeColor: '#3D8B40', backgroundColor: 'rgba(194, 255, 199, 0.2)', lightModeBackgroundColor: 'rgba(61, 139, 64, 0.1)' },
     { name: 'Node.js', category: 'backend', iconClass: 'fab fa-node-js', color: '#68A063', lightModeColor: '#3C6E3C', backgroundColor: 'rgba(104, 160, 99, 0.2)', lightModeBackgroundColor: 'rgba(60, 110, 60, 0.1)' },
     { name: 'Express', category: 'backend', iconClass: 'fas fa-server', color: '#FFFFFF', lightModeColor: '#000000', backgroundColor: 'rgba(255, 255, 255, 0.2)', lightModeBackgroundColor: 'rgba(0, 0, 0, 0.1)' },
+    { name: 'Mongoose', category: 'backend', iconClass: 'fas fa-database', color: '#AA2929', lightModeColor: '#880000', backgroundColor: 'rgba(170, 41, 41, 0.2)', lightModeBackgroundColor: 'rgba(136, 0, 0, 0.1)' },
     { name: 'Django', category: 'backend', iconClass: 'fab fa-python', color: '#00D383', lightModeColor: '#0A4A2A', backgroundColor: 'rgba(0, 211, 131, 0.2)', lightModeBackgroundColor: 'rgba(10, 74, 42, 0.1)' },
     { name: 'Flask', category: 'backend', iconClass: 'fas fa-flask', color: '#CCCCCC', lightModeColor: '#3A3A3A', backgroundColor: 'rgba(204, 204, 204, 0.2)', lightModeBackgroundColor: 'rgba(58, 58, 58, 0.1)' },
     { name: 'FastAPI', category: 'backend', iconClass: 'fa-solid fa-bolt', color: '#009688', backgroundColor: 'rgba(0, 150, 136, 0.2)' },
@@ -77,6 +78,13 @@ export class ProfileDataService {
       link: 'https://neonys.fr',
       image: 'assets/card-thumbnails/neonys.png',
       technologies: ['HTML', 'CSS', 'JavaScript', 'TailwindCSS', 'N8N']
+    },
+
+    {
+      translationKey: 'biopotions',
+      link: 'https://biopotions.netlify.app',
+      image: 'assets/card-thumbnails/biopotions.png',
+      technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Mongoose', 'TailwindCSS']
     },
 
     {
