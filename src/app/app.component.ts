@@ -1,4 +1,6 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, PLATFORM_ID } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
+import { isPlatformBrowser } from '@angular/common';
 import { SharedMaterialModule } from './shared/material/shared-material.module';
 import { HeaderComponent } from './core/header/header.component';
 import { MainComponent } from './core/main/main.component';
@@ -18,4 +20,18 @@ export class AppComponent {
 
   // Inject theme service to initialize it immediately
   private themeService = inject(ThemeService);
+  private router = inject(Router);
+  private platformId = inject(PLATFORM_ID);
+
+  constructor() {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        if (isPlatformBrowser(this.platformId)) {
+          setTimeout(() => {
+            window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+          }, 0);
+        }
+      }
+    });
+  }
 }
