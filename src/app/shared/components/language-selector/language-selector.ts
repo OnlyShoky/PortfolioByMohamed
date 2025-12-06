@@ -6,7 +6,7 @@ import { TranslationService } from '../../services/translation';
 interface Language {
   code: string;
   name: string;
-  flag: string;
+  color: string;
 }
 
 @Component({
@@ -23,17 +23,17 @@ export class LanguageSelectorComponent implements OnInit {
     {
       code: 'en',
       name: 'English',
-      flag: 'https://flagcdn.com/w20/gb.png'
+      color: '#ffffffff' // Blue
     },
     {
       code: 'es',
       name: 'Español',
-      flag: 'https://flagcdn.com/w20/es.png'
+      color: '#ff0000ff' // Amber
     },
     {
       code: 'fr',
       name: 'Français',
-      flag: 'https://flagcdn.com/w20/fr.png'
+      color: '#00763b' // Purple
     }
   ];
 
@@ -47,7 +47,7 @@ export class LanguageSelectorComponent implements OnInit {
     if (typeof window !== 'undefined') {
       const browserLang = navigator.language.split('-')[0];
       const supported = this.languages.some(lang => lang.code === browserLang);
-      
+
       if (supported) {
         this.translationService.setLanguage(browserLang);
       } else {
@@ -60,10 +60,10 @@ export class LanguageSelectorComponent implements OnInit {
     return this.translationService.getCurrentLanguage().toUpperCase();
   }
 
-  getCurrentFlag(): string {
+  getCurrentColor(): string {
     const currentLang = this.translationService.getCurrentLanguage();
     const language = this.languages.find(lang => lang.code === currentLang);
-    return language?.flag || this.languages[0].flag;
+    return language?.color || this.languages[0].color;
   }
 
   changeLanguage(languageCode: string): void {
