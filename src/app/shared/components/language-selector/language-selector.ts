@@ -23,7 +23,7 @@ export class LanguageSelectorComponent implements OnInit {
     {
       code: 'en',
       name: 'English',
-      color: '#ffffffff' // Blue
+      color: 'var(--display-color)' // Blue
     },
     {
       code: 'es',
@@ -33,7 +33,7 @@ export class LanguageSelectorComponent implements OnInit {
     {
       code: 'fr',
       name: 'Français',
-      color: '#00763b' // Purple
+      color: 'var(--highlight-color)' // Purple
     }
   ];
 

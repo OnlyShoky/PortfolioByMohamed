@@ -12,12 +12,37 @@
   .logo {
     // font-family: "Stalinist One", sans-serif;
     font-family: "Permanent Marker", cursive;
+    text-decoration: none; // Ensure no underline
 
     font-size: 32px;
     // font-weight: bold;
     color: var(--display-color);
     cursor: pointer;
     transition: color 0.3s ease;
+
+    display: inline-flex;
+    align-items: center;
+
+    .logo-text {
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .expandable {
+      max-width: 0;
+      opacity: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      transition: max-width 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    }
+
+    &:hover {
+      .expandable {
+        max-width: 200px;
+        opacity: 1;
+        margin-left: 1px; // Slight spacing if needed, but M and ohamed join naturally in many fonts
+      }
+    }
   }
 
   .bracket {
