@@ -27,6 +27,7 @@ export class TechnologiesComponent {
     { key: 'aiml', name: 'AI & ML', icon: 'fas fa-robot' },
     { key: 'devops', name: 'DevOps', icon: 'fas fa-cloud' },
     { key: 'database', name: 'Database', icon: 'fas fa-database' },
+    { key: 'data', name: 'Data', icon: 'fas fa-chart-line' },
     { key: 'embedded', name: 'Embedded', icon: 'fas fa-microchip' },
     { key: 'gamedev', name: 'Game Dev', icon: 'fas fa-gamepad' },
     { key: 'tools', name: 'Tools', icon: 'fas fa-toolbox' }

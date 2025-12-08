@@ -49,6 +49,12 @@ export class TechnologyStackComponent {
       description: 'Data management'
     },
     {
+      name: 'Data',
+      key: 'data',
+      icon: 'fas fa-chart-line',
+      description: 'Analytics & Processing'
+    },
+    {
       name: 'Other Tools',
       key: 'other',
       icon: 'fas fa-toolbox',

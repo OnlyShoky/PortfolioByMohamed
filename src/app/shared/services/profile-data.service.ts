@@ -15,6 +15,9 @@ export class ProfileDataService {
     { name: 'Django', category: 'backend', iconClass: 'fab fa-python', color: '#00D383', lightModeColor: '#0A4A2A', backgroundColor: 'rgba(0, 211, 131, 0.2)', lightModeBackgroundColor: 'rgba(10, 74, 42, 0.1)' },
     { name: 'Flask', category: 'backend', iconClass: 'fas fa-flask', color: '#CCCCCC', lightModeColor: '#3A3A3A', backgroundColor: 'rgba(204, 204, 204, 0.2)', lightModeBackgroundColor: 'rgba(58, 58, 58, 0.1)' },
     { name: 'FastAPI', category: 'backend', iconClass: 'fa-solid fa-bolt', color: '#009688', backgroundColor: 'rgba(0, 150, 136, 0.2)' },
+    { name: 'Java', category: 'backend', iconClass: 'fab fa-java', color: '#F89820', backgroundColor: 'rgba(248, 152, 32, 0.2)' },
+    { name: 'C', category: 'backend', iconClass: 'fas fa-code', color: '#A8B9CC', backgroundColor: 'rgba(168, 185, 204, 0.2)' },
+    { name: 'C++', category: 'backend', iconClass: 'fab fa-cuttlefish', color: '#00599C', backgroundColor: 'rgba(0, 89, 156, 0.2)' },
     { name: 'HTTP', category: 'backend', iconClass: 'fa-solid fa-globe', color: '#005C99', backgroundColor: 'rgba(0, 92, 153, 0.2)' },
 
     // Frontend
@@ -30,10 +33,14 @@ export class ProfileDataService {
     { name: 'Chart.js', category: 'frontend', iconClass: 'fas fa-chart-bar', color: '#FF6384', backgroundColor: 'rgba(255, 182, 193, 0.2)' },
 
     // AI & ML
+    { name: 'Python', category: 'aiml', iconClass: 'fab fa-python', color: '#9EDF9C', backgroundColor: 'rgba(194, 255, 199, 0.2)' },
     { name: 'PyTorch', category: 'aiml', iconClass: 'fa-solid fa-fire-flame-curved', color: '#EE4C2C', backgroundColor: 'rgba(238, 76, 44, 0.2)' },
     { name: 'Detectron2', category: 'aiml', iconClass: 'fa-solid fa-robot', color: '#FFC107', lightModeColor: '#C79100', backgroundColor: 'rgba(255, 193, 7, 0.2)', lightModeBackgroundColor: 'rgba(199, 145, 0, 0.1)' },
+    { name: 'PointNet', category: 'aiml', iconClass: 'fas fa-project-diagram', color: '#32E0C4', backgroundColor: 'rgba(50, 224, 196, 0.2)' },
     { name: 'OpenCV', category: 'aiml', iconClass: 'fas fa-eye', color: '#7D5CE8', lightModeColor: '#5A3EB8', backgroundColor: 'rgba(125, 92, 232, 0.2)', lightModeBackgroundColor: 'rgba(90, 62, 184, 0.1)' },
     { name: 'Gemini AI', category: 'aiml', iconClass: 'fab fa-google', color: '#B589FF', lightModeColor: '#7C3FD3', backgroundColor: 'rgba(181, 137, 255, 0.2)', lightModeBackgroundColor: 'rgba(124, 63, 211, 0.1)' },
+    { name: 'DeepSeek', category: 'aiml', iconClass: 'fas fa-brain', color: '#FF6B6B', backgroundColor: 'rgba(255, 107, 107, 0.2)' },
+    { name: 'OpenAI', category: 'aiml', iconClass: 'fas fa-robot', color: '#10A37F', backgroundColor: 'rgba(16, 163, 127, 0.2)' },
     { name: 'ROS', category: 'aiml', iconClass: 'fa-solid fa-robot', color: '#69D4E5', lightModeColor: '#1E88A8', backgroundColor: 'rgba(105, 212, 229, 0.2)', lightModeBackgroundColor: 'rgba(30, 136, 168, 0.1)' },
 
     // Database
@@ -49,9 +56,20 @@ export class ProfileDataService {
     { name: 'Firefox Extension', category: 'devops', iconClass: 'fab fa-firefox', color: '#FF9500', lightModeColor: '#D87000', backgroundColor: 'rgba(255, 149, 0, 0.2)', lightModeBackgroundColor: 'rgba(214, 115, 0, 0.1)' },
 
     // Embedded & IoT
+    { name: 'C', category: 'embedded', iconClass: 'fas fa-code', color: '#A8B9CC', backgroundColor: 'rgba(168, 185, 204, 0.2)' },
     { name: 'C++', category: 'embedded', iconClass: 'fab fa-cuttlefish', color: '#4A90E2', backgroundColor: 'rgba(180, 210, 255, 0.2)' },
-    { name: 'Raspberry Pi', category: 'embedded', iconClass: 'fas fa-raspberry-pi', color: '#C51A4A', backgroundColor: 'rgba(197, 26, 74, 0.2)' },
+    { name: 'VHDL', category: 'embedded', iconClass: 'fas fa-microchip', color: '#5C6BC0', backgroundColor: 'rgba(92, 107, 192, 0.2)' },
+    { name: 'FPGA', category: 'embedded', iconClass: 'fas fa-microchip', color: '#EF5350', backgroundColor: 'rgba(239, 83, 80, 0.2)' },
+    { name: 'Python', category: 'embedded', iconClass: 'fab fa-python', color: '#9EDF9C', backgroundColor: 'rgba(194, 255, 199, 0.2)' },
+    { name: 'Raspberry Pi', category: 'embedded', iconClass: 'fab fa-raspberry-pi', color: '#C51A4A', backgroundColor: 'rgba(197, 26, 74, 0.2)' },
+    { name: 'ROS', category: 'embedded', iconClass: 'fas fa-robot', color: '#69D4E5', backgroundColor: 'rgba(105, 212, 229, 0.2)' },
     { name: 'PyAudio', category: 'embedded', iconClass: 'fas fa-microphone', color: '#1DB954', backgroundColor: 'rgba(29, 185, 84, 0.2)' },
+
+    // Data Analytics & Processing
+    { name: 'Python', category: 'data', iconClass: 'fab fa-python', color: '#9EDF9C', backgroundColor: 'rgba(194, 255, 199, 0.2)' },
+    { name: 'SQL', category: 'data', iconClass: 'fas fa-database', color: '#00BFFF', backgroundColor: 'rgba(0, 191, 255, 0.2)' },
+    { name: 'SAS', category: 'data', iconClass: 'fas fa-table', color: '#007AC9', backgroundColor: 'rgba(0, 122, 201, 0.2)' },
+    { name: 'FuzzyWuzzy', category: 'data', iconClass: 'fas fa-stream', color: '#FFB74D', backgroundColor: 'rgba(255, 183, 77, 0.2)' },
 
     // Game Development
     { name: 'C#', category: 'gamedev', iconClass: 'fab fa-microsoft', color: '#9B4F96', backgroundColor: 'rgba(155, 79, 150, 0.2)' },
