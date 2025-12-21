@@ -8,17 +8,18 @@ export class ProfileDataService {
 
   technologies = [
     // Backend
-    { name: 'Python', category: 'backend', iconClass: 'fab fa-python', color: '#9EDF9C', lightModeColor: '#3D8B40', backgroundColor: 'rgba(194, 255, 199, 0.2)', lightModeBackgroundColor: 'rgba(61, 139, 64, 0.1)' },
     { name: 'Node.js', category: 'backend', iconClass: 'fab fa-node-js', color: '#68A063', lightModeColor: '#3C6E3C', backgroundColor: 'rgba(104, 160, 99, 0.2)', lightModeBackgroundColor: 'rgba(60, 110, 60, 0.1)' },
     { name: 'Express', category: 'backend', iconClass: 'fas fa-server', color: '#FFFFFF', lightModeColor: '#000000', backgroundColor: 'rgba(255, 255, 255, 0.2)', lightModeBackgroundColor: 'rgba(0, 0, 0, 0.1)' },
     { name: 'Mongoose', category: 'backend', iconClass: 'fas fa-database', color: '#AA2929', lightModeColor: '#880000', backgroundColor: 'rgba(170, 41, 41, 0.2)', lightModeBackgroundColor: 'rgba(136, 0, 0, 0.1)' },
     { name: 'Django', category: 'backend', iconClass: 'fab fa-python', color: '#00D383', lightModeColor: '#0A4A2A', backgroundColor: 'rgba(0, 211, 131, 0.2)', lightModeBackgroundColor: 'rgba(10, 74, 42, 0.1)' },
     { name: 'Flask', category: 'backend', iconClass: 'fas fa-flask', color: '#CCCCCC', lightModeColor: '#3A3A3A', backgroundColor: 'rgba(204, 204, 204, 0.2)', lightModeBackgroundColor: 'rgba(58, 58, 58, 0.1)' },
     { name: 'FastAPI', category: 'backend', iconClass: 'fa-solid fa-bolt', color: '#009688', backgroundColor: 'rgba(0, 150, 136, 0.2)' },
+    { name: 'Supabase', category: 'backend', iconClass: 'fas fa-bolt', color: '#3fcd8e', lightModeColor: '#1d935b', backgroundColor: 'rgba(0, 191, 255, 0.2)', lightModeBackgroundColor: 'rgba(0, 128, 204, 0.1)' },
     { name: 'Java', category: 'backend', iconClass: 'fab fa-java', color: '#F89820', backgroundColor: 'rgba(248, 152, 32, 0.2)' },
     { name: 'C', category: 'backend', iconClass: 'fas fa-code', color: '#A8B9CC', backgroundColor: 'rgba(168, 185, 204, 0.2)' },
     { name: 'C++', category: 'backend', iconClass: 'fab fa-cuttlefish', color: '#00599C', backgroundColor: 'rgba(0, 89, 156, 0.2)' },
     { name: 'HTTP', category: 'backend', iconClass: 'fa-solid fa-globe', color: '#005C99', backgroundColor: 'rgba(0, 92, 153, 0.2)' },
+    { name: 'Python', category: 'backend', iconClass: 'fab fa-python', color: '#9EDF9C', lightModeColor: '#3D8B40', backgroundColor: 'rgba(194, 255, 199, 0.2)', lightModeBackgroundColor: 'rgba(61, 139, 64, 0.1)' },
 
     // Frontend
     { name: 'Angular', category: 'frontend', iconClass: 'fab fa-angular', color: '#FF2929', backgroundColor: 'rgba(255, 207, 179, 0.2)' },
@@ -31,6 +32,7 @@ export class ProfileDataService {
     { name: 'TailwindCSS', category: 'frontend', iconClass: 'fas fa-wind', color: '#38BDF8', backgroundColor: 'rgba(56, 189, 248, 0.2)' },
     { name: 'Prism.js', category: 'frontend', iconClass: 'fas fa-lightbulb', color: '#9B59B6', backgroundColor: 'rgba(201, 155, 225, 0.2)' },
     { name: 'Chart.js', category: 'frontend', iconClass: 'fas fa-chart-bar', color: '#FF6384', backgroundColor: 'rgba(255, 182, 193, 0.2)' },
+    { name: 'Vite', category: 'frontend', iconClass: 'fas fa-bolt', color: '#FFC107', backgroundColor: 'rgba(56, 189, 248, 0.2)' },
 
     // AI & ML
     { name: 'Python', category: 'aiml', iconClass: 'fab fa-python', color: '#9EDF9C', backgroundColor: 'rgba(194, 255, 199, 0.2)' },
@@ -46,6 +48,7 @@ export class ProfileDataService {
     // Database
     { name: 'SQL', category: 'database', iconClass: 'fas fa-database', color: '#00BFFF', lightModeColor: '#0080CC', backgroundColor: 'rgba(0, 191, 255, 0.2)', lightModeBackgroundColor: 'rgba(0, 128, 204, 0.1)' },
     { name: 'MongoDB', category: 'database', iconClass: 'fas fa-leaf', color: '#00ED64', lightModeColor: '#00A344', backgroundColor: 'rgba(0, 237, 100, 0.2)', lightModeBackgroundColor: 'rgba(0, 163, 68, 0.1)' },
+    { name: 'Supabase', category: 'database', iconClass: 'fas fa-bolt', color: '#3fcd8e', lightModeColor: '#1d935b', backgroundColor: 'rgba(0, 191, 255, 0.2)', lightModeBackgroundColor: 'rgba(0, 128, 204, 0.1)' },
 
     // DevOps & Cloud
     { name: 'Docker', category: 'devops', iconClass: 'fab fa-docker', color: '#2496ED', backgroundColor: 'rgba(36, 150, 237, 0.2)' },
@@ -83,6 +86,14 @@ export class ProfileDataService {
 
 
   private projects: Project[] = [
+
+
+    {
+      translationKey: 'toptiermodels',
+      link: 'https://toptiermodels.netlify.app',
+      image: 'assets/card-thumbnails/toptiermodels.png',
+      technologies: ['React', 'Vite', 'CSS', 'Supabase']
+    },
 
     {
       translationKey: 'myramyrror',

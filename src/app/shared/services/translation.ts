@@ -51,6 +51,10 @@ export class TranslationService {
         explore: "Explore more"
       },
       projectData: {
+        toptiermodels: {
+          title: "TopTierModels",
+          description: "TopTierModels is a review platform dedicated to discovering the latest AI models, evaluating their performance, and publishing comprehensive reviews and tier lists."
+        },
         myramyrror: {
           title: "MyraMyrror",
           description: "AI-powered virtual try-on solution that allows users to see how clothes fit their body type before making a purchase."
@@ -139,6 +143,10 @@ export class TranslationService {
         explore: "Explorar más"
       },
       projectData: {
+        toptiermodels: {
+          title: "TopTierModels",
+          description: "TopTierModels es una página de reseñas que descubre los últimos modelos de IA, los evalúa y publica reseñas exhaustivas y listas de niveles en una plataforma web."
+        },
         myramyrror: {
           title: "MyraMyrror",
           description: "Solución de prueba virtual impulsada por IA que permite a los usuarios ver cómo les queda la ropa antes de realizar una compra."
@@ -227,6 +235,10 @@ export class TranslationService {
         explore: "Explorer plus"
       },
       projectData: {
+        toptiermodels: {
+          title: "TopTierModels",
+          description: "TopTierModels est un site de critiques qui découvre les derniers modèles d'IA, les évalue et publie des critiques exhaustives et des classements sur une plateforme web."
+        },
         myramyrror: {
           title: "MyraMyrror",
           description: "Solution d'essayage virtuel alimentée par l'IA qui permet aux utilisateurs de voir comment les vêtements s'adaptent à leur morphologie avant d'effectuer un achat."
