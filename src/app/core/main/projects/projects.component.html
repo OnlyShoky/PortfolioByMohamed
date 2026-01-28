@@ -6,8 +6,22 @@
     </p>
   </div>
 
+  <div class="filter-buttons">
+    <button 
+      (click)="filterByCategory(null)" 
+      [class.active]="selectedCategory === null">
+      {{ getTranslation('projects.filters.all') }}
+    </button>
+    <button 
+      *ngFor="let cat of categories" 
+      (click)="filterByCategory(cat)"
+      [class.active]="selectedCategory === cat">
+      {{ getTranslation('projects.filters.' + getCategoryKey(cat)) }}
+    </button>
+  </div>
+
   <div class="projects-flex">
-    <a *ngFor="let project of projects" [href]="project.link" target="_blank" class="project-link">
+    <a *ngFor="let project of filteredProjects" [href]="project.link" target="_blank" class="project-link">
       <mat-card class="project-card">
         <img mat-card-image [src]="project.image" [alt]="getProjectTitle(project)" appSkeletonLoader />
         <mat-card-content>

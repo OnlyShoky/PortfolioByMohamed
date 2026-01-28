@@ -1,3 +1,5 @@
+export type ProjectCategory = 'Web' | 'AI & Robotics' | 'Systems';
+
 export interface Project {
   translationKey?: string; // Key to fetch translations
   title?: string; // Optional for backward compatibility
@@ -5,6 +7,7 @@ export interface Project {
   description?: string; // Optional for backward compatibility
   image: string;
   technologies: string[];
+  categories: ProjectCategory[];
 }
 
 export interface Experience {

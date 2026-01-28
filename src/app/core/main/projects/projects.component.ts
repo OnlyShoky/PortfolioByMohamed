@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { ProfileDataService } from '../../../shared/services/profile-data.service';
-import { Project } from '../../../shared/models/interfaces';
+import { Project, ProjectCategory } from '../../../shared/models/interfaces';
 import { TranslationService } from '../../../shared/services/translation';
 import { SkeletonLoaderDirective } from '../../../shared/directives/skeleton-loader.directive';
 
@@ -15,23 +15,43 @@ import { ThemeService } from '../../../shared/services/theme.service';
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
-export class ProjectsComponent {
+export class ProjectsComponent implements OnInit {
 
-  projects: Project[];
+  projects: Project[] = [];
+  filteredProjects: Project[] = [];
+  selectedCategory: ProjectCategory | null = null;
+  categories: ProjectCategory[] = [];
+
   private themeService = inject(ThemeService);
+  private translationService = inject(TranslationService);
 
-  constructor(private profileDataService: ProfileDataService) {
+  constructor(private profileDataService: ProfileDataService) { }
+
+  ngOnInit(): void {
     this.projects = this.profileDataService.getProjects();
+    this.categories = this.profileDataService.getProjectCategories();
+    this.filteredProjects = this.projects;
   }
 
+  filterByCategory(category: ProjectCategory | null): void {
+    this.selectedCategory = category;
+    this.filteredProjects = this.profileDataService.getProjectsByCategory(category);
+  }
+
+  getCategoryKey(category: ProjectCategory): string {
+    const keyMap: Record<ProjectCategory, string> = {
+      'Web': 'web',
+      'AI & Robotics': 'aiRobotics',
+      'Systems': 'systems'
+    };
+    return keyMap[category];
+  }
 
   // Helper function to get technology details by name (theme-aware)
   getTechDetails(techName: string) {
     const isDarkMode = this.themeService.isDark();
     return this.profileDataService.getTechDetails(techName, isDarkMode);
   }
-
-  private translationService = inject(TranslationService);
 
   getTranslation(key: string): string {
     return this.translationService.getTranslation(key);
@@ -54,3 +74,4 @@ export class ProjectsComponent {
   }
 
 }
+

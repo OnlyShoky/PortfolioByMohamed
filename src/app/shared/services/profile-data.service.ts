@@ -1,5 +1,5 @@
 ﻿import { Injectable } from '@angular/core';
-import { Project, Experience, Education } from '../models/interfaces';
+import { Project, Experience, Education, ProjectCategory } from '../models/interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -86,74 +86,91 @@ export class ProfileDataService {
 
 
   private projects: Project[] = [
-
+    {
+      translationKey: 'ros2tutorial',
+      link: 'https://www.youtube.com/playlist?list=PLN65mHMMQSYDTAgwF_k2IJLSSkxMcROEL',
+      image: 'assets/card-thumbnails/ros2.png',
+      technologies: ['ROS', 'Python', 'C++', 'Linux'],
+      categories: ['AI & Robotics', 'Systems']
+    },
 
     {
       translationKey: 'toptiermodels',
       link: 'https://toptiermodels.netlify.app',
       image: 'assets/card-thumbnails/toptiermodels.png',
-      technologies: ['React', 'Vite', 'CSS', 'Supabase']
+      technologies: ['React', 'Vite', 'CSS', 'Supabase'],
+      categories: ['Web']
     },
 
     {
       translationKey: 'myramyrror',
       link: 'https://www.myramyrror.com',
       image: 'assets/card-thumbnails/myramyrror.png',
-      technologies: ['Angular', 'Gemini AI', 'Chrome Extension', 'Firefox Extension']
+      technologies: ['Angular', 'Gemini AI', 'Chrome Extension', 'Firefox Extension'],
+      categories: ['Web', 'AI & Robotics', 'Systems']
     },
 
     {
       translationKey: 'neonys',
       link: 'https://neonys.fr',
       image: 'assets/card-thumbnails/neonys.png',
-      technologies: ['HTML', 'CSS', 'JavaScript', 'TailwindCSS', 'N8N']
+      technologies: ['HTML', 'CSS', 'JavaScript', 'TailwindCSS', 'N8N'],
+      categories: ['Web']
     },
 
     {
       translationKey: 'biopotions',
       link: 'https://biopotions.netlify.app',
       image: 'assets/card-thumbnails/biopotions.png',
-      technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Mongoose', 'TailwindCSS']
+      technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Mongoose', 'TailwindCSS'],
+      categories: ['Web']
     },
 
     {
       translationKey: 'mealprepcodex',
       link: 'https://github.com/OnlyShoky/recipe_project',
       image: 'assets/card-thumbnails/mealprep.png',
-      technologies: ['Django', 'Docker', 'Google Cloud', 'SQL']
+      technologies: ['Django', 'Docker', 'Google Cloud', 'SQL'],
+      categories: ['Web']
     },
 
     {
       translationKey: 'pibabymonitor',
       link: 'https://github.com/OnlyShoky/pibabymonitor',
       image: 'assets/card-thumbnails/pibabymonitor.png',
-      technologies: ['Python', 'OpenCV', 'Flask', 'FFmpeg']
+      technologies: ['Python', 'OpenCV', 'Flask', 'FFmpeg'],
+      categories: ['AI & Robotics', 'Systems']
     },
 
     {
       translationKey: 'animalgo',
       link: 'https://animalgo.netlify.app',
       image: 'assets/card-thumbnails/animalgo.png',
-      technologies: ['Angular', 'HTML', 'SCSS', 'TypeScript']
+      technologies: ['Angular', 'HTML', 'SCSS', 'TypeScript'],
+      categories: ['Web']
     },
     {
       translationKey: 'portfolio',
       link: 'https://mohamed-elmourabit.netlify.app',
       image: 'assets/card-thumbnails/portfolio1.png',
-      technologies: ['Angular', 'HTML', 'SCSS', 'TypeScript']
+      technologies: ['Angular', 'HTML', 'SCSS', 'TypeScript'],
+      categories: ['Web']
     },
     {
       translationKey: 'algonimation',
       link: 'https://algonimation.netlify.app',
       image: 'assets/card-thumbnails/algonimation.png',
-      technologies: ['Angular', 'Chart.js', 'Prism.js']
+      technologies: ['Angular', 'Chart.js', 'Prism.js'],
+      categories: ['Web']
     },
     {
       translationKey: 'semisupervised',
       link: 'https://github.com/OnlyShoky/Detectron2-STAC-SODA10m',
       image: 'assets/card-thumbnails/smartvision.gif',
-      technologies: ['Python', 'Detectron2', 'PyTorch']
+      technologies: ['Python', 'Detectron2', 'PyTorch'],
+      categories: ['AI & Robotics']
     },
+
   ];
 
   private experiences: Experience[] = [
@@ -309,6 +326,17 @@ export class ProfileDataService {
 
   getProjects(n: number = this.projects.length): Project[] {
     return this.projects.slice(0, n);
+  }
+
+  getProjectsByCategory(category: ProjectCategory | null): Project[] {
+    if (category === null) {
+      return this.projects;
+    }
+    return this.projects.filter(project => project.categories.includes(category));
+  }
+
+  getProjectCategories(): ProjectCategory[] {
+    return ['Web', 'AI & Robotics', 'Systems'];
   }
 
   // Helper function to get technology details by name (theme-aware)

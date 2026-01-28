@@ -48,7 +48,13 @@ export class TranslationService {
       projects: {
         title: "All Creative Works.",
         description: "Here's some of my projects that I have worked on.",
-        explore: "Explore more"
+        explore: "Explore more",
+        filters: {
+          all: "All Projects",
+          web: "Web",
+          aiRobotics: "AI & Robotics",
+          systems: "Systems"
+        }
       },
       projectData: {
         toptiermodels: {
@@ -90,6 +96,10 @@ export class TranslationService {
         semisupervised: {
           title: "Semi-Supervised Object Detection",
           description: "A project leveraging semi-supervised learning with STAC and Detectron2 for enhanced object detection on the SODA10m dataset."
+        },
+        ros2tutorial: {
+          title: "ROS2 Tutorial Series",
+          description: "A comprehensive YouTube tutorial series on installing ROS2 on Windows with WSL2, covering core concepts like Gazebo simulation, RViz visualization, URDF/XACRO, and more."
         }
       },
       contact: {
@@ -140,7 +150,13 @@ export class TranslationService {
       projects: {
         title: "Todos los Trabajos Creativos.",
         description: "Aquí hay algunos de mis proyectos en los que he trabajado.",
-        explore: "Explorar más"
+        explore: "Explorar más",
+        filters: {
+          all: "Todos los Proyectos",
+          web: "Web",
+          aiRobotics: "IA y Robótica",
+          systems: "Sistemas"
+        }
       },
       projectData: {
         toptiermodels: {
@@ -182,6 +198,10 @@ export class TranslationService {
         semisupervised: {
           title: "Detección de Objetos Semi-Supervisada",
           description: "Un proyecto que aprovecha el aprendizaje semi-supervisado con STAC y Detectron2 para una detección de objetos mejorada en el conjunto de datos SODA10m."
+        },
+        ros2tutorial: {
+          title: "Serie de Tutoriales ROS2",
+          description: "Una serie completa de tutoriales en YouTube sobre la instalación de ROS2 en Windows con WSL2, cubriendo conceptos clave como simulación Gazebo, visualización RViz, URDF/XACRO y más."
         }
       },
       contact: {
@@ -232,7 +252,13 @@ export class TranslationService {
       projects: {
         title: "Tous les Travaux Créatifs.",
         description: "Voici quelques-uns de mes projets sur lesquels j'ai travaillé.",
-        explore: "Explorer plus"
+        explore: "Explorer plus",
+        filters: {
+          all: "Tous les Projets",
+          web: "Web",
+          aiRobotics: "IA et Robotique",
+          systems: "Systèmes"
+        }
       },
       projectData: {
         toptiermodels: {
@@ -274,6 +300,10 @@ export class TranslationService {
         semisupervised: {
           title: "Détection d'Objets Semi-Supervisée",
           description: "Un projet exploitant l'apprentissage semi-supervisé avec STAC et Detectron2 pour une détection d'objets améliorée sur le jeu de données SODA10m."
+        },
+        ros2tutorial: {
+          title: "Série de Tutoriels ROS2",
+          description: "Une série complète de tutoriels YouTube sur l'installation de ROS2 sous Windows avec WSL2, couvrant les concepts clés comme la simulation Gazebo, la visualisation RViz, URDF/XACRO et plus encore."
         }
       },
       contact: {
